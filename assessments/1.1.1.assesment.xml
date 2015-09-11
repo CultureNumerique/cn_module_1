@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questestinterop xmlns="http://www.imsglobal.org/xsd/ims_qtiasiv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/ims_qtiasiv1p2 http://www.imsglobal.org/profile/cc/ccv1p1/ccv1p1_qtiasiv1p2p1_v1p0.xsd">
+  <assessment ident="QDB_3533B2D5" title="1.1.1 Quizz (3 questions)">
+    <qtimetadata>
+      <qtimetadatafield>
+        <fieldlabel>cc_profile</fieldlabel>
+        <fieldentry>cc.exam.v0p1</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>qmd_assessmenttype</fieldlabel>
+        <fieldentry>Examination</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>qmd_scoretype</fieldlabel>
+        <fieldentry>Percentage</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>qmd_feedbackpermitted</fieldlabel>
+        <fieldentry>Yes</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>qmd_hintspermitted</fieldlabel>
+        <fieldentry>Yes</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>qmd_solutionspermitted</fieldlabel>
+        <fieldentry>Yes</fieldentry>
+      </qtimetadatafield>
+      <qtimetadatafield>
+        <fieldlabel>cc_maxattempts</fieldlabel>
+        <fieldentry>1</fieldentry>
+      </qtimetadatafield>
+    </qtimetadata>
+    <rubric>
+      <material label="Summary">
+        <mattext texttype="text/html"><![CDATA[1.1.1 Quizz (3 questions)]]></mattext>
+      </material>
+    </rubric>
+    <section ident="I_0DCD8E98">
+      <item ident="I_223E6497" title="1.1.1. Quizz (Q1/3)">
+        <itemmetadata>
+          <qtimetadata>
+            <qtimetadatafield>
+              <fieldlabel>cc_profile</fieldlabel>
+              <fieldentry>cc.multiple_choice.v0p1</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>cc_question_category</fieldlabel>
+              <fieldentry>Quiz Bank '1.1.1 Quizz (3 questions)'</fieldentry>
+            </qtimetadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[<p>Pourquoi faut-il représenter les textes, images, son, etc.  par des nombres dans un ordinateur ?</p>]]></mattext>
+          </material>
+          <response_lid rcardinality="Single" ident="I_130EE218">
+            <render_choice shuffle="No">
+              <response_label ident="I_8DCF7AB6">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[<p>C'est un choix industriel.</p>]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="I_2B351384">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[<p>Les ordinateurs ont été inventés par des mathématiciens.</p>]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="I_A6469B0F">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[<p>Tout ordinateur est fondamentalement une machine qui calcule avec des nombres.</p>]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar varname="SCORE" vartype="Decimal" minvalue="0" maxvalue="100"/>
+          </outcomes>
+          <respcondition title="General feedback" continue="Yes">
+            <conditionvar>
+              <other/>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="general_fb"/>
+          </respcondition>
+          <respcondition title="Correct" continue="No">
+            <conditionvar>
+              <varequal respident="I_130EE218">I_A6469B0F</varequal>
+            </conditionvar>
+            <setvar varname="SCORE" action="Set">100</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="I_A6469B0F_fb"/>
+          </respcondition>
+          <respcondition continue="No">
+            <conditionvar>
+              <varequal respident="I_130EE218">I_8DCF7AB6</varequal>
+            </conditionvar>
+            <setvar varname="SCORE" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="I_8DCF7AB6_fb"/>
+          </respcondition>
+          <respcondition continue="No">
+            <conditionvar>
+              <varequal respident="I_130EE218">I_2B351384</varequal>
+            </conditionvar>
+            <setvar varname="SCORE" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="I_2B351384_fb"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="I_8DCF7AB6_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html"><![CDATA[<p>Non, les industriels n'avaient pas le choix.</p> <p>Votre réponse est incorrecte.</p> ]]></mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="I_2B351384_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html"><![CDATA[<p>Non, les mathématiciens savent manipuler autre-chose que des nombres, et les ordinateurs sont le fruit de l'interaction entre de nombreuses sciences.</p> <p>Votre réponse est incorrecte.</p> ]]></mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="I_A6469B0F_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html"><![CDATA[<p>Oui, comme un ordinateur ne manipule que des nombres, tout doit être représenté sous forme de nombres pour qu'un ordinateur puisse le manipuler.</p> <p>Votre réponse est correcte.</p> ]]></mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="general_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html"><![CDATA[<p>Un ordinateur ne manipule que des nombres, tout doit donc être représenté sous forme de nombres pour qu'il puisse le manipuler.</p> ]]></mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+      </item>
+      <item ident="I_C50B48C4" title="1.1.1 Quizz (Q2/3)">
+        <itemmetadata>
+          <qtimetadata>
+            <qtimetadatafield>
+              <fieldlabel>cc_profile</fieldlabel>
+              <fieldentry>cc.multiple_choice.v0p1</fieldentry>
+            </qtimetadatafield>
+            <qtimetadatafield>
+              <fieldlabel>cc_question_category</fieldlabel>
+              <fieldentry>Quiz Bank '1.1.1 Quizz (3 questions)'</fieldentry>
+            </qtimetadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <presentation>
+          <material>
+            <mattext texttype="text/html"><![CDATA[<p>Que signifie "<em>numérisation</em>" ?</p>]]></mattext>
+          </material>
+          <response_lid rcardinality="Single" ident="I_B32B1CC7">
+            <render_choice shuffle="No">
+              <response_label ident="I_E3A17C8E">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[<p>L’opération qui consiste à représenter sous forme de nombres une information quelle qu’elle soit.</p>]]></mattext>
+                </material>
+              </response_label>
+              <response_label ident="I_2093A018">
+                <material>
+                  <mattext texttype="text/html"><![CDATA[<p>L’opération qui consiste à citer tous les nombres (1, 2, 3, 4, ….).</p>]]></mattext>
+                </material>
+              </response_label>
+            </render_choice>
+          </response_lid>
+        </presentation>
+        <resprocessing>
+          <outcomes>
+            <decvar varname="SCORE" vartype="Decimal" minvalue="0" maxvalue="100"/>
+          </outcomes>
+          <respcondition title="General feedback" continue="Yes">
+            <conditionvar>
+              <other/>
+            </conditionvar>
+            <displayfeedback feedbacktype="Response" linkrefid="general_fb"/>
+          </respcondition>
+          <respcondition title="Correct" continue="No">
+            <conditionvar>
+              <varequal respident="I_B32B1CC7">I_E3A17C8E</varequal>
+            </conditionvar>
+            <setvar varname="SCORE" action="Set">100</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="I_E3A17C8E_fb"/>
+          </respcondition>
+          <respcondition continue="No">
+            <conditionvar>
+              <varequal respident="I_B32B1CC7">I_2093A018</varequal>
+            </conditionvar>
+            <setvar varname="SCORE" action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="I_2093A018_fb"/>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="I_E3A17C8E_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html"><![CDATA[<p>Oui !</p> <p>Votre réponse est correcte.</p> ]]></mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="I_2093A018_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html"><![CDATA[<p>Non, citer tous les nombres c’est compter...</p> <p>Votre réponse est incorrecte.</p> ]]></mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+        <itemfeedback ident="general_fb">
+          <flow_mat>
+            <material>
+              <mattext texttype="text/html"><![CDATA[<p>La numérisation est l’opération qui consiste à représenter sous forme de nombres une information, quelle qu’elle soit.</p> ]]></mattext>
+            </material>
+          </flow_mat>
+        </itemfeedback>
+      </item>
+    </section>
+  </assessment>
+</questestinterop>

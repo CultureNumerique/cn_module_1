@@ -27,14 +27,15 @@
         <!-- BEGIN : INTRO -->
         <item identifier="I_5A72ABA3">
             <title>0</title>
+            <!--  sec 0.1 -->
             <item identifier="I_478EF1F6" identifierref="I_6F143AAF_R">
                 <title>Objectifs et fonctionnement du cours "Culture numérique"</title>
             </item>
-            <!--  sec 0.1-->
+            <!--  sec 0.2 -->
             <item identifier="I_E6F3BA8C" identifierref="I_517806FF_R">
                 <title>Comment répondre aux tests de compréhension ?</title>
             </item>
-            <!--  sec 0.2-->
+            <!--  sec 0.3 -->
             <item identifier="I_25F6F517" identifierref="I_9BB52A4C_R">
                 <title>Comment répondre aux exercices d'approfondissement ?</title>
             </item>
@@ -224,9 +225,7 @@
           <title>18</title>
       </item>
     </item>
-</organization>
-
-
+   </organization>
   </organizations>
   <!--  RESOURCES -->
   <resources>
@@ -315,9 +314,11 @@
     <!-- WEBCONTENT -->
     <resource identifier="I_517806FF_R" type="webcontent" href="webcontent/comment_répondre_aux_tests_de_compréhension_?.html">
       <file href="webcontent/comment_répondre_aux_tests_de_compréhension_?.html"/>
+      <dependency identifierref="I_B1500CFB_R" />
     </resource>
     <resource identifier="I_9BB52A4C_R" type="webcontent" href="webcontent/comment_répondre_aux_exercices_dapprofondissement_?.html">
       <file href="webcontent/comment_répondre_aux_exercices_dapprofondissement_?.html"/>
+      <dependency identifierref="I_EA1B7F83_R" />
     </resource>
     <resource identifier="I_FEABF09F_R" type="webcontent" href="webcontent/1.1_informatique_et_numérique_(version_texte).html">
       <file href="webcontent/1.1_informatique_et_numérique_(version_texte).html"/>

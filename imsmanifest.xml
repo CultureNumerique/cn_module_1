@@ -7,7 +7,7 @@
     <lomimscc:lom>
       <lomimscc:general>
         <lomimscc:title>
-          <lomimscc:string language="en">Culture numérique - 2014 / 2015 (UE 10 - S2) - L1</lomimscc:string>
+          <lomimscc:string language="en">Culture numérique TEST</lomimscc:string>
         </lomimscc:title>
         <lomimscc:language>en</lomimscc:language>
         <lomimscc:description>
@@ -20,667 +20,386 @@
       </lomimscc:general>
     </lomimscc:lom>
   </metadata>
+
   <organizations>
     <organization identifier="O_9D241D2F" structure="rooted-hierarchy">
       <item identifier="root">
+        <!-- BEGIN : INTRO -->
         <item identifier="I_5A72ABA3">
-          <title>0</title>
-          <item identifier="I_309F3A2E">
-            <title>Étiquette</title>
-          </item>
-          <item identifier="I_F60EDF82">
-            <title>Étiquette</title>
-          </item>
-          <item identifier="I_14854132">
-            <title></title>
+            <title>0</title>
             <item identifier="I_478EF1F6" identifierref="I_6F143AAF_R">
-              <title>Objectifs et fonctionnement du cours "Culture numérique"</title>
+                <title>Objectifs et fonctionnement du cours "Culture numérique"</title>
             </item>
-          </item>
-          <item identifier="I_AB98E2E7">
-            <title></title>
+            <!--  sec 0.1-->
             <item identifier="I_E6F3BA8C" identifierref="I_517806FF_R">
-              <title>Comment répondre aux tests de compréhension ?</title>
+                <title>Comment répondre aux tests de compréhension ?</title>
             </item>
-          </item>
-          <item identifier="I_DCE059CB">
-            <title></title>
+            <!--  sec 0.2-->
             <item identifier="I_25F6F517" identifierref="I_9BB52A4C_R">
-              <title>Comment répondre aux exercices d'approfondissement ?</title>
+                <title>Comment répondre aux exercices d'approfondissement ?</title>
             </item>
-          </item>
-          <item identifier="I_8BC5C9EF">
-            <title>Étiquette</title>
-          </item>
-          <item identifier="I_79991493">
-            <title></title>
+            <!--  sec forum questions-->
             <item identifier="I_D178402D" identifierref="I_FD5ACF79_R">
-              <title>FORUM DE QUESTIONS</title>
+                <title>FORUM DE QUESTIONS</title>
             </item>
-          </item>
-          <item identifier="I_2725201E" identifierref="I_6EE3C167_R">
-            <title>Forum des nouvelles</title>
-          </item>
+            <!--  sec forum nouvelles-->
+            <item identifier="I_2725201E" identifierref="I_6EE3C167_R">
+                <title>Forum des nouvelles</title>
+            </item>
         </item>
-        <item identifier="I_39FF6A5D">
-          <title>1</title>
-          <item identifier="I_A05F3E97">
-            <title>Étiquette</title>
-          </item>
-        </item>
+        <!--  END : INTRO -->
+
+        <!-- BEGIN : SECTION 1 -->
         <item identifier="I_39690AA7">
-          <title>2</title>
-          <item identifier="I_BADE6A5F">
-            <title></title>
-            <item identifier="I_B56D51CE">
-              <title>Étiquette</title>
-            </item>
-          </item>
-          <item identifier="I_673087B0">
-            <title></title>
+            <title>1</title>
+            <!--  sec 1.1 -->
             <item identifier="I_69C13D81" identifierref="I_FEABF09F_R">
-              <title>1.1 Informatique et numérique (version texte)</title>
+                <title>1.1 Informatique et numérique (version texte)</title>
             </item>
-          </item>
-          <item identifier="I_E94B4DCA">
-            <title>Étiquette</title>
-          </item>
-          <item identifier="I_435CDEBF">
-            <title></title>
-            <item identifier="I_1D6915FE">
-              <title></title>
-              <item identifier="I_ABEB8790" identifierref="I_AC5E49C3_R">
+            <!--  sec 1.1.1 -->
+            <item identifier="I_ABEB8790" identifierref="I_AC5E49C3_R">
                 <title>1.1.1 Quizz (3 questions)</title>
-              </item>
             </item>
-          </item>
-          <item identifier="I_8491DF60">
-            <title>Étiquette</title>
-          </item>
-          <item identifier="I_83B9ACE9">
-            <title></title>
-            <item identifier="I_F5F1F8B1">
-              <title></title>
-              <item identifier="I_D4CAB389" identifierref="I_755F0840_R">
+            <!--  sec 1.1.2 -->
+            <item identifier="I_D4CAB389" identifierref="I_755F0840_R">
                 <title>1.1.2 Le numérique dans tous les domaines - Correction</title>
-              </item>
             </item>
-          </item>
-          <item identifier="I_BA0C7B4B">
-            <title>Étiquette</title>
-          </item>
-          <item identifier="I_18D9572C">
-            <title></title>
-            <item identifier="I_C0C6581F">
-              <title></title>
-              <item identifier="I_0EB44103" identifierref="I_0161A5D5_R">
+            <!--  sec 1.1.3 -->
+            <item identifier="I_0EB44103" identifierref="I_0161A5D5_R">
                 <title>1.1.3 Le numérique au quotidien - Correction</title>
-              </item>
             </item>
-          </item>
-          <item identifier="I_A2350117">
-            <title>Étiquette</title>
-          </item>
-          <item identifier="I_8A0C7FBB">
-            <title></title>
-            <item identifier="I_2606BE1F">
-              <title></title>
-              <item identifier="I_EBA9BA27" identifierref="I_4D001A2D_R">
+            <!--  sec 1.1.4 -->
+            <item identifier="I_EBA9BA27" identifierref="I_4D001A2D_R">
                 <title>1.1.4 Le numérique dans la société - Correction</title>
-              </item>
             </item>
-          </item>
-        </item>
-        <item identifier="I_43C8FB1A">
+      </item>
+      <!--  BEGIN: SECTION 2 -->
+      <item identifier="I_43C8FB1A">
+            <title>2</title>
+            <item identifier="I_69AAF75B" identifierref="I_0AB726AC_R">
+              <title>1.2 Historique informatique (version texte)</title>
+            </item>
+            <item identifier="I_740B46CA" identifierref="I_6FEB2F21_R">
+              <title>1.2.1 Quizz (2 questions)</title>
+            </item>
+            <item identifier="I_49C47E6B" identifierref="I_33F61364_R">
+              <title>1.2.2 Quizz (2 questions)</title>
+            </item>
+            <item identifier="I_0B49A202" identifierref="I_49EE0E95_R">
+              <title>1.2.3 Personnages importants - Correction</title>
+            </item>
+            <item identifier="I_29AEB36D" identifierref="I_50D201E9_R">
+              <title>1.2.4 la vitesse des ordinateurs - Correction</title>
+            </item>
+            <item identifier="I_9A7D0182" identifierref="I_2FE4C720_R">
+              <title>1.2.5 D'où vient le PC ? - Correction</title>
+            </item>
+            <item identifier="I_22C10917" identifierref="I_002EDC66_R">
+              <title>1.2.6 Évolution des interfaces homme-machine - Correction</title>
+            </item>
+      </item>
+      <!--  END : SECTION 2 -->
+      <!--  BEGIN : SECTION 3 -->
+      <item identifier="I_58614E4E">
           <title>3</title>
-          <item identifier="I_911CD621">
-            <title>Étiquette</title>
-          </item>
-          <item identifier="I_69AAF75B" identifierref="I_0AB726AC_R">
-            <title>1.2 Historique informatique (version texte)</title>
-          </item>
-          <item identifier="I_CCA2F0B1">
-            <title>Étiquette</title>
-          </item>
-          <item identifier="I_8BA45B56">
-            <title></title>
-            <item identifier="I_D65CFDDE">
-              <title></title>
-              <item identifier="I_740B46CA" identifierref="I_6FEB2F21_R">
-                <title>1.2.1 Quizz (2 questions)</title>
-              </item>
-            </item>
-          </item>
-          <item identifier="I_505B4061">
-            <title>Étiquette</title>
-          </item>
-          <item identifier="I_E7F82A5C">
-            <title></title>
-            <item identifier="I_BDDC9B17">
-              <title></title>
-              <item identifier="I_49C47E6B" identifierref="I_33F61364_R">
-                <title>1.2.2 Quizz (2 questions)</title>
-              </item>
-            </item>
-          </item>
-          <item identifier="I_E8EE593A">
-            <title></title>
-            <item identifier="I_5D7455AA">
-              <title></title>
-              <item identifier="I_0B49A202" identifierref="I_49EE0E95_R">
-                <title>1.2.3 Personnages importants - Correction</title>
-              </item>
-            </item>
-          </item>
-          <item identifier="I_3574A34E">
-            <title>Étiquette</title>
-          </item>
-          <item identifier="I_C9216EB4">
-            <title></title>
-            <item identifier="I_6BD7ECA3">
-              <title></title>
-              <item identifier="I_29AEB36D" identifierref="I_50D201E9_R">
-                <title>1.2.4 la vitesse des ordinateurs - Correction</title>
-              </item>
-            </item>
-          </item>
-          <item identifier="I_071061C8">
-            <title>Étiquette</title>
-          </item>
-          <item identifier="I_142975FB">
-            <title></title>
-            <item identifier="I_6CFC6D84">
-              <title></title>
-              <item identifier="I_9A7D0182" identifierref="I_2FE4C720_R">
-                <title>1.2.5 D'où vient le PC ? - Correction</title>
-              </item>
-            </item>
-          </item>
-          <item identifier="I_BE7FFD3B">
-            <title>Étiquette</title>
-          </item>
-          <item identifier="I_CE7C71ED">
-            <title></title>
-            <item identifier="I_7ABD5950">
-              <title></title>
-              <item identifier="I_22C10917" identifierref="I_002EDC66_R">
-                <title>1.2.6 Évolution des interfaces homme-machine - Correction</title>
-              </item>
-            </item>
-          </item>
-        </item>
-        <item identifier="I_58614E4E">
-          <title>4</title>
-          <item identifier="I_1A94DB8A">
-            <title>Étiquette</title>
-          </item>
           <item identifier="I_EB1023C4" identifierref="I_08BDDD49_R">
-            <title>1.3 Naissance d'Internet (version texte)</title>
+              <title>1.3 Naissance d'Internet (version texte)</title>
           </item>
-          <item identifier="I_CF46FAA1">
-            <title>Étiquette</title>
+          <item identifier="I_20D6EBFF" identifierref="I_C2DF48DF_R">
+              <title>1.3.1 Quizz (3 questions)</title>
           </item>
-          <item identifier="I_6DF6ABAF">
-            <title></title>
-            <item identifier="I_FBE11CD9">
-              <title></title>
-              <item identifier="I_20D6EBFF" identifierref="I_C2DF48DF_R">
-                <title>1.3.1 Quizz (3 questions)</title>
-              </item>
-            </item>
+          <item identifier="I_A356F1A6" identifierref="I_82F0BB03_R">
+              <title>1.3.2 Qui a inventé Internet ? - Correction</title>
           </item>
-          <item identifier="I_9BB509D2">
-            <title>Étiquette</title>
+          <item identifier="I_C33CA6F0" identifierref="I_8F743BCD_R">
+              <title>1.3.3 Qui a accès à internet ? - Correction</title>
           </item>
-          <item identifier="I_EA51CF1A">
-            <title></title>
-            <item identifier="I_677989BE">
-              <title></title>
-              <item identifier="I_A356F1A6" identifierref="I_82F0BB03_R">
-                <title>1.3.2 Qui a inventé Internet ? - Correction</title>
-              </item>
-            </item>
-          </item>
-          <item identifier="I_995CF38E">
-            <title>Étiquette</title>
-          </item>
-          <item identifier="I_CFE7F48C">
-            <title></title>
-            <item identifier="I_2E316C0D">
-              <title></title>
-              <item identifier="I_C33CA6F0" identifierref="I_8F743BCD_R">
-                <title>1.3.3 Qui a accès à internet ? - Correction</title>
-              </item>
-            </item>
-          </item>
-        </item>
-        <item identifier="I_B651682B">
-          <title>5</title>
-          <item identifier="I_3C8953FF">
-            <title>Étiquette</title>
-          </item>
+      </item>
+      <!--  END SECTION 3 -->
+      <!--  BEGIN SECTION 4 -->
+      <item identifier="I_B651682B">
+          <title>4</title>
           <item identifier="I_B06C117E" identifierref="I_AC5E094F_R">
-            <title>1.4 Comment ça marche ? (version texte)</title>
+              <title>1.4 Comment ça marche ? (version texte)</title>
           </item>
-          <item identifier="I_39E61B2F">
-            <title>Étiquette</title>
+          <item identifier="I_EA388BCF" identifierref="I_41E51F66_R">
+              <title>1.4.1 Quizz (3 questions)</title>
           </item>
-          <item identifier="I_8E862F4B">
-            <title></title>
-            <item identifier="I_EE94B87D">
-              <title></title>
-              <item identifier="I_EA388BCF" identifierref="I_41E51F66_R">
-                <title>1.4.1 Quizz (3 questions)</title>
-              </item>
-            </item>
+          <item identifier="I_B406D3CF" identifierref="I_A76A3381_R">
+              <title>1.4.2 Combien y-a-t-il d'adresses IP ?</title>
           </item>
-          <item identifier="I_90F7E9D3">
-            <title>Étiquette</title>
+          <item identifier="I_B792E798" identifierref="I_2FD7CFF1_R">
+              <title>1.4.3 Les serveurs de noms - correction</title>
           </item>
-          <item identifier="I_7EC01678">
-            <title></title>
-            <item identifier="I_F0420D9A">
-              <title></title>
-              <item identifier="I_B406D3CF" identifierref="I_A76A3381_R">
-                <title>1.4.2 Combien y-a-t-il d'adresses IP ?</title>
-              </item>
-            </item>
+          <item identifier="I_C7F34755" identifierref="I_2FD9B708_R">
+              <title>1.4.4. Panne générale - Correction</title>
           </item>
-          <item identifier="I_1C6AB195">
-            <title>Étiquette</title>
-          </item>
-          <item identifier="I_3A7FCF58">
-            <title></title>
-            <item identifier="I_7FB26CB3">
-              <title></title>
-              <item identifier="I_B792E798" identifierref="I_2FD7CFF1_R">
-                <title>1.4.3 Les serveurs de noms - correction</title>
-              </item>
-            </item>
-          </item>
-          <item identifier="I_F1FDB618">
-            <title>Étiquette</title>
-          </item>
-          <item identifier="I_193B75CF">
-            <title></title>
-            <item identifier="I_825EF7BF">
-              <title></title>
-              <item identifier="I_C7F34755" identifierref="I_2FD9B708_R">
-                <title>1.4.4. Panne générale - Correction</title>
-              </item>
-            </item>
-          </item>
-        </item>
-        <item identifier="I_F948A5DE">
-          <title>6</title>
-          <item identifier="I_37605D30">
-            <title>Étiquette</title>
-          </item>
+      </item>
+      <!--  END SECTION 4  -->
+      <!--  BEGIN SECTION 5 -->
+      <item identifier="I_F948A5DE">
+          <title>5</title>
           <item identifier="I_670BEE01" identifierref="I_8E1E724A_R">
-            <title>1.5 Que se passe-t-il quand on se connecte à Internet ? (version texte)</title>
+              <title>1.5 Que se passe-t-il quand on se connecte à Internet ? (version texte)</title>
           </item>
-          <item identifier="I_C4D93074">
-            <title>Étiquette</title>
+          <item identifier="I_4FEC557D" identifierref="I_D8D1AA75_R">
+              <title>1.5.1 Quizz (2 questions)</title>
           </item>
-          <item identifier="I_519A6235">
-            <title></title>
-            <item identifier="I_E27C66D5">
-              <title></title>
-              <item identifier="I_4FEC557D" identifierref="I_D8D1AA75_R">
-                <title>1.5.1 Quizz (2 questions)</title>
-              </item>
-            </item>
+          <item identifier="I_45E73D04" identifierref="I_558B544D_R">
+              <title>1.5.2 Utiliser les serveurs de noms - Correction</title>
           </item>
-          <item identifier="I_14509802">
-            <title>Étiquette</title>
+          <item identifier="I_8CD4589F" identifierref="I_64A598EB_R">
+              <title>1.5.3 La charte informatique de l'université - Correction</title>
           </item>
-          <item identifier="I_A41756E9">
-            <title></title>
-            <item identifier="I_240725D8">
-              <title></title>
-              <item identifier="I_45E73D04" identifierref="I_558B544D_R">
-                <title>1.5.2 Utiliser les serveurs de noms - Correction</title>
-              </item>
-            </item>
-          </item>
-          <item identifier="I_66D110C8">
-            <title>Étiquette</title>
-          </item>
-          <item identifier="I_6A2FEB14">
-            <title></title>
-            <item identifier="I_05FCD077">
-              <title></title>
-              <item identifier="I_8CD4589F" identifierref="I_64A598EB_R">
-                <title>1.5.3 La charte informatique de l'université - Correction</title>
-              </item>
-            </item>
-          </item>
-        </item>
-        <item identifier="I_A2D2C890">
-          <title>7</title>
-          <item identifier="I_B36D3AE9">
-            <title>Étiquette</title>
-          </item>
+      </item>
+      <!--  END SECTION 5 -->
+      <!--  BEGIN SECTION 6 -->
+      <item identifier="I_A2D2C890">
+          <title>6</title>
           <item identifier="I_302FB888" identifierref="I_2DA8AF79_R">
-            <title>1.6 Les supports physiques de transmission de l’information (version texte)</title>
-          </item>
-          <item identifier="I_37AB3102">
-            <title>Étiquette</title>
-          </item>
-          <item identifier="I_4F3304A8">
-            <title>Étiquette</title>
+              <title>1.6 Les supports physiques de transmission de l’information (version texte)</title>
           </item>
           <item identifier="I_21154797" identifierref="I_B73CB712_R">
-            <title>1.7 Connexions nomades et vitesse de transmission  (version texte)</title>
+              <title>1.7 Connexions nomades et vitesse de transmission  (version texte)</title>
           </item>
-          <item identifier="I_7B5EAB5F">
-            <title>Étiquette</title>
+          <item identifier="I_6F82B1C7" identifierref="I_505A4155_R">
+              <title>1.6.1 Quizz (3 questions)</title>
           </item>
-          <item identifier="I_7F5A928F">
-            <title></title>
-            <item identifier="I_CC122C78">
-              <title></title>
-              <item identifier="I_6F82B1C7" identifierref="I_505A4155_R">
-                <title>1.6.1 Quizz (3 questions)</title>
-              </item>
-            </item>
+          <item identifier="I_EFAB8F54" identifierref="I_D83EED4A_R">
+              <title>1.6.2 Wifi ou Données mobiles ? - Correction</title>
           </item>
-          <item identifier="I_B610ECD1">
-            <title>Étiquette</title>
+          <item identifier="I_CB3F9EEC" identifierref="I_F230F387_R">
+              <title>1.6.3. Les débits : correction</title>
           </item>
-          <item identifier="I_41CD5F96">
-            <title></title>
-            <item identifier="I_C9A3956B">
-              <title></title>
-              <item identifier="I_EFAB8F54" identifierref="I_D83EED4A_R">
-                <title>1.6.2 Wifi ou Données mobiles ? - Correction</title>
-              </item>
-            </item>
+          <item identifier="I_AA496009" identifierref="I_0E95E1F3_R">
+              <title>1.6.4 Le saviez-vous ? l'ADSL et ses débits ... </title>
           </item>
-          <item identifier="I_4BEDF368">
-            <title>Étiquette</title>
-          </item>
-          <item identifier="I_86CE0351">
-            <title></title>
-            <item identifier="I_89BACF8A">
-              <title></title>
-              <item identifier="I_CB3F9EEC" identifierref="I_F230F387_R">
-                <title>1.6.3. Les débits : correction</title>
-              </item>
-            </item>
-          </item>
-          <item identifier="I_A8E11218">
-            <title>Étiquette</title>
-          </item>
-          <item identifier="I_03DFEF65">
-            <title></title>
-            <item identifier="I_5EE2B02F">
-              <title></title>
-              <item identifier="I_AA496009" identifierref="I_0E95E1F3_R">
-                <title>1.6.4 Le saviez-vous ? l'ADSL et ses débits ... </title>
-              </item>
-            </item>
-          </item>
-          <item identifier="I_A0FE2E03">
-            <title>Étiquette</title>
-          </item>
-        </item>
-        <item identifier="I_17CAB505">
-          <title>8</title>
-          <item identifier="I_E3D8C08E">
-            <title>Étiquette</title>
-          </item>
-          <item identifier="I_50DCEC6C" identifierref="I_FD33001C_R">
-            <title>1.8 Société : qui décide sur Internet ? (version texte)</title>
-          </item>
-          <item identifier="I_8F367182">
-            <title>Étiquette</title>
-          </item>
-          <item identifier="I_4A398097">
-            <title></title>
-            <item identifier="I_5EB2503C">
-              <title></title>
-            </item>
-          </item>
-          <item identifier="I_67A20D9E">
-            <title>Étiquette</title>
-          </item>
-          <item identifier="I_A507CC0A">
-            <title></title>
-            <item identifier="I_1A3FB47A">
-              <title></title>
-              <item identifier="I_CFC6E852" identifierref="I_78608955_R">
-                <title>1.8.2 Le saviez-vous ? Comment la Chine censure Internet ?</title>
-              </item>
-            </item>
-          </item>
-          <item identifier="I_6A9C7848">
-            <title>Étiquette</title>
-          </item>
-          <item identifier="I_5F821779">
-            <title></title>
-            <item identifier="I_E6CC4356">
-              <title></title>
-              <item identifier="I_A9DA9ACD" identifierref="I_DA20800F_R">
-                <title>1.8.3 L’ICANN et la CNIL- correction</title>
-              </item>
-            </item>
-          </item>
-          <item identifier="I_5A84A2F7">
-            <title>Étiquette</title>
-          </item>
-          <item identifier="I_FC49C392">
-            <title></title>
-            <item identifier="I_16065427">
-              <title></title>
-              <item identifier="I_35A692D2" identifierref="I_12762896_R">
-                <title>ENQUÊTE DE FIN DE COURS (environ 10 min)</title>
-              </item>
-            </item>
-          </item>
-        </item>
-        <item identifier="I_906FF9CA">
-          <title>9</title>
-        </item>
-        <item identifier="I_310DEEEE">
-          <title>10</title>
-        </item>
-        <item identifier="I_A4A1FF8F">
-          <title>11</title>
-        </item>
-        <item identifier="I_3DFEAB91">
-          <title>12</title>
-        </item>
-        <item identifier="I_190E96A0">
-          <title>13</title>
-        </item>
-        <item identifier="I_5D0212E7">
-          <title>14</title>
-        </item>
-        <item identifier="I_442B7FC0">
-          <title>15</title>
-        </item>
-        <item identifier="I_2C8AF6A8">
-          <title>16</title>
-        </item>
-        <item identifier="I_F5F2D45B">
-          <title>17</title>
-        </item>
-        <item identifier="I_C9D36A51">
-          <title>18</title>
-        </item>
       </item>
-    </organization>
+      <!--  END SECTION 6 -->
+      <!-- (FIXME: it should be section 7) BEGIN SECTION 8  -->
+      <item identifier="I_17CAB505">
+          <title>8</title>
+          <item identifier="I_50DCEC6C" identifierref="I_FD33001C_R">
+              <title>1.8 Société : qui décide sur Internet ? (version texte)</title>
+          </item>
+          <item identifier="I_CFC6E852" identifierref="I_78608955_R">
+              <title>1.8.2 Le saviez-vous ? Comment la Chine censure Internet ?</title>
+          </item>
+          <item identifier="I_A9DA9ACD" identifierref="I_DA20800F_R">
+              <title>1.8.3 L’ICANN et la CNIL- correction</title>
+          </item>
+          <item identifier="I_35A692D2" identifierref="I_12762896_R">
+              <title>ENQUÊTE DE FIN DE COURS (environ 10 min)</title>
+          </item>
+      </item>
+      <!--  END SECTION 8 -->
+      <item identifier="I_906FF9CA">
+          <title>9</title>
+      </item>
+      <item identifier="I_310DEEEE">
+          <title>10</title>
+      </item>
+      <item identifier="I_A4A1FF8F">
+          <title>11</title>
+      </item>
+      <item identifier="I_3DFEAB91">
+          <title>12</title>
+      </item>
+      <item identifier="I_190E96A0">
+          <title>13</title>
+      </item>
+      <item identifier="I_5D0212E7">
+          <title>14</title>
+      </item>
+      <item identifier="I_442B7FC0">
+          <title>15</title>
+      </item>
+      <item identifier="I_2C8AF6A8">
+          <title>16</title>
+      </item>
+      <item identifier="I_F5F2D45B">
+          <title>17</title>
+      </item>
+      <item identifier="I_C9D36A51">
+          <title>18</title>
+      </item>
+    </item>
+</organization>
+
+
   </organizations>
+  <!--  RESOURCES -->
   <resources>
-    <resource identifier="I_11F257AB_R" type="webcontent">
-      <file href="i_12597a28/i_9d677392/logo_cult-num.png"/>
-    </resource>
-    <resource identifier="I_4DD848EF_R" type="webcontent">
-      <file href="i_12597a28/i_9d677392/separateur_haut-01.png"/>
-    </resource>
-    <resource identifier="I_6F143AAF_R" type="webcontent">
-      <file href="i_12597a28/i_9d677392/culture-numerique_mode_emploi-v04.pdf"/>
-    </resource>
-    <resource identifier="I_852FE444_R" type="webcontent">
-      <file href="i_12597a28/i_9d677392/separateur_coffee-01.png"/>
-    </resource>
-    <resource identifier="I_81D92B7B_R" type="webcontent">
-      <file href="i_12597a28/i_9d677392/logo_final_seulrond_nb-01.png"/>
-    </resource>
-    <resource identifier="I_A2BF809D_R" type="webcontent">
-      <file href="i_12597a28/i_9d677392/separateur_bas-01.png"/>
-    </resource>
-    <resource identifier="I_66EC7873_R" type="webcontent">
-      <file href="i_12597a28/i_9d677392/cult_num_s1_mod_1_internet_.svg"/>
-    </resource>
-    <resource identifier="I_E49B66A7_R" type="webcontent">
-      <file href="i_12597a28/i_9d677392/louispouzin.jpg"/>
-    </resource>
-    <resource identifier="I_EA1B7F83_R" type="webcontent">
-      <file href="i_12597a28/i_9d677392/separateur_exercices_dapprofondissement-01.png"/>
-    </resource>
-    <resource identifier="I_A8C7FD4B_R" type="webcontent">
-      <file href="i_12597a28/i_9d677392/vintoncerf.jpg"/>
-    </resource>
-    <resource identifier="I_B1500CFB_R" type="webcontent">
-      <file href="i_12597a28/i_9d677392/separateur_test_decomprehension-01.png"/>
-    </resource>
-    <resource identifier="I_EDA45C7B_R" type="webcontent">
-      <file href="i_12597a28/i_9d677392/logo_final_plat_nb-01.png"/>
-    </resource>
-    <resource identifier="I_FCB413DF_R" type="webcontent">
-      <file href="i_12597a28/i_9d677392/separateur_forum-01.png"/>
-    </resource>
-    <resource identifier="I_2C2AA410_R" type="webcontent">
-      <file href="i_12597a28/i_9d677392/logo.png"/>
-    </resource>
-    <resource identifier="I_E4682AE9_R" type="webcontent">
-      <file href="i_12597a28/i_9d677392/logo_web-01.png"/>
-    </resource>
-    <resource identifier="I_241ACDF2_R" type="webcontent">
-      <file href="i_12597a28/i_9d677392/illu_1.jpg"/>
-    </resource>
-    <resource identifier="I_BE7B627B_R" type="webcontent">
-      <file href="i_12597a28/files.gif"/>
-    </resource>
-    <resource identifier="I_517806FF_R" type="webcontent" href="i_be283e55/comment_répondre_aux_tests_de_compréhension_?.html">
-      <file href="i_be283e55/comment_répondre_aux_tests_de_compréhension_?.html"/>
-    </resource>
-    <resource identifier="I_9BB52A4C_R" type="webcontent" href="i_a1c4f543/comment_répondre_aux_exercices_dapprofondissement_?.html">
-      <file href="i_a1c4f543/comment_répondre_aux_exercices_dapprofondissement_?.html"/>
+    <resource identifier="I_12762896_R" type="imswl_xmlv1p1">
+      <file href="weblinks/ENQUETE_DE_FIN_DE_COURS.weblink.xml"/>
     </resource>
     <resource identifier="I_FD5ACF79_R" type="imsdt_xmlv1p1">
-      <file href="i_f67cf462/discussion.xml"/>
+      <file href="discussions/FORUM_DE_QUESTIONS.discussion.xml"/>
     </resource>
     <resource identifier="I_6EE3C167_R" type="imsdt_xmlv1p1">
-      <file href="i_1c253803/discussion.xml"/>
-    </resource>
-    <resource identifier="I_FEABF09F_R" type="webcontent" href="i_dddccdd1/1.1_informatique_et_numérique_(version_texte).html">
-      <file href="i_dddccdd1/1.1_informatique_et_numérique_(version_texte).html"/>
+      <file href="discussions/FORUM_DES_NOUVELLES.discussion.xml"/>
     </resource>
     <resource identifier="I_AC5E49C3_R" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
-      <file href="i_41604f30/assesment.xml"/>
-    </resource>
-    <resource identifier="I_755F0840_R" type="webcontent" href="i_d34227e2/1.1.2_le_numérique_dans_tous_les_domaines_-_correction.html">
-      <file href="i_d34227e2/1.1.2_le_numérique_dans_tous_les_domaines_-_correction.html"/>
-    </resource>
-    <resource identifier="I_0161A5D5_R" type="webcontent" href="i_1cdc2db3/1.1.3_le_numérique_au_quotidien_-_correction.html">
-      <file href="i_1cdc2db3/1.1.3_le_numérique_au_quotidien_-_correction.html"/>
-    </resource>
-    <resource identifier="I_4D001A2D_R" type="webcontent" href="i_58e2577b/1.1.4_le_numérique_dans_la_société_-_correction.html">
-      <file href="i_58e2577b/1.1.4_le_numérique_dans_la_société_-_correction.html"/>
-    </resource>
-    <resource identifier="I_0AB726AC_R" type="webcontent" href="i_d22d7829/1.2_historique_informatique_(version_texte).html">
-      <file href="i_d22d7829/1.2_historique_informatique_(version_texte).html"/>
+      <file href="assessments/1.1.1.assesment.xml"/>
     </resource>
     <resource identifier="I_6FEB2F21_R" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
-      <file href="i_f20967f2/assesment.xml"/>
+      <file href="assessments/1.2.1.assesment.xml"/>
     </resource>
     <resource identifier="I_33F61364_R" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
-      <file href="i_fe4f3f6a/assesment.xml"/>
-    </resource>
-    <resource identifier="I_49EE0E95_R" type="webcontent" href="i_8e9de8d8/1.2.3_personnages_importants_-_correction.html">
-      <file href="i_8e9de8d8/1.2.3_personnages_importants_-_correction.html"/>
-    </resource>
-    <resource identifier="I_50D201E9_R" type="webcontent" href="i_58300dde/1.2.4_la_vitesse_des_ordinateurs_-_correction.html">
-      <file href="i_58300dde/1.2.4_la_vitesse_des_ordinateurs_-_correction.html"/>
-    </resource>
-    <resource identifier="I_2FE4C720_R" type="webcontent" href="i_838db91f/1.2.5_doù_vient_le_pc_?_-_correction.html">
-      <file href="i_838db91f/1.2.5_doù_vient_le_pc_?_-_correction.html"/>
-    </resource>
-    <resource identifier="I_002EDC66_R" type="webcontent" href="i_41d2f5b1/1.2.6_Évolution_des_interfaces_homme-machine_-_correction.html">
-      <file href="i_41d2f5b1/1.2.6_Évolution_des_interfaces_homme-machine_-_correction.html"/>
-    </resource>
-    <resource identifier="I_08BDDD49_R" type="webcontent" href="i_4005f61e/1.3_naissance_dinternet_(version_texte).html">
-      <file href="i_4005f61e/1.3_naissance_dinternet_(version_texte).html"/>
+      <file href="assessments/1.2.2.assesment.xml"/>
     </resource>
     <resource identifier="I_C2DF48DF_R" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
-      <file href="i_cc2408e0/assesment.xml"/>
-    </resource>
-    <resource identifier="I_82F0BB03_R" type="webcontent" href="i_232e04b9/1.3.2_qui_a_inventé_internet_?_-_correction.html">
-      <file href="i_232e04b9/1.3.2_qui_a_inventé_internet_?_-_correction.html"/>
-      <dependency identifierref="I_A8C7FD4B_R"/>
-    </resource>
-    <resource identifier="I_8F743BCD_R" type="webcontent" href="i_f4b405ee/1.3.3_qui_a_accès_à_internet_?_-_correction.html">
-      <file href="i_f4b405ee/1.3.3_qui_a_accès_à_internet_?_-_correction.html"/>
-    </resource>
-    <resource identifier="I_AC5E094F_R" type="webcontent" href="i_928e1710/1.4_comment_ça_marche_?_(version_texte).html">
-      <file href="i_928e1710/1.4_comment_ça_marche_?_(version_texte).html"/>
+      <file href="assessments/1.3.1.assesment.xml"/>
     </resource>
     <resource identifier="I_41E51F66_R" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
-      <file href="i_95d2c44d/assesment.xml"/>
-    </resource>
-    <resource identifier="I_A76A3381_R" type="webcontent" href="i_73de4f6f/1.4.2_combien_y-a-t-il_dadresses_ip_?.html">
-      <file href="i_73de4f6f/1.4.2_combien_y-a-t-il_dadresses_ip_?.html"/>
-    </resource>
-    <resource identifier="I_2FD7CFF1_R" type="webcontent" href="i_23e1559e/1.4.3_les_serveurs_de_noms_-_correction.html">
-      <file href="i_23e1559e/1.4.3_les_serveurs_de_noms_-_correction.html"/>
-    </resource>
-    <resource identifier="I_2FD9B708_R" type="webcontent" href="i_143bd85c/1.4.4._panne_générale_-_correction.html">
-      <file href="i_143bd85c/1.4.4._panne_générale_-_correction.html"/>
-    </resource>
-    <resource identifier="I_8E1E724A_R" type="webcontent" href="i_630e4977/1.5_que_se_passe-t-il_quand_on_se_connecte_à_internet_?_(version_texte).html">
-      <file href="i_630e4977/1.5_que_se_passe-t-il_quand_on_se_connecte_à_internet_?_(version_texte).html"/>
+      <file href="assessments/1.4.1.assesment.xml"/>
     </resource>
     <resource identifier="I_D8D1AA75_R" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
-      <file href="i_38505e1a/assesment.xml"/>
-    </resource>
-    <resource identifier="I_558B544D_R" type="webcontent" href="i_01a1d705/1.5.2_utiliser_les_serveurs_de_noms_-_correction.html">
-      <file href="i_01a1d705/1.5.2_utiliser_les_serveurs_de_noms_-_correction.html"/>
-    </resource>
-    <resource identifier="I_64A598EB_R" type="webcontent" href="i_2bd34c48/1.5.3_la_charte_informatique_de_luniversité_-_correction.html">
-      <file href="i_2bd34c48/1.5.3_la_charte_informatique_de_luniversité_-_correction.html"/>
-    </resource>
-    <resource identifier="I_2DA8AF79_R" type="webcontent" href="i_c8cf8409/1.6_les_supports_physiques_de_transmission_de_l’information_(version_texte).html">
-      <file href="i_c8cf8409/1.6_les_supports_physiques_de_transmission_de_l’information_(version_texte).html"/>
-    </resource>
-    <resource identifier="I_B73CB712_R" type="webcontent" href="i_bb74977f/1.7_connexions_nomades_et_vitesse_de_transmission__(version_texte).html">
-      <file href="i_bb74977f/1.7_connexions_nomades_et_vitesse_de_transmission__(version_texte).html"/>
+      <file href="assessments/1.5.1.assesment.xml"/>
     </resource>
     <resource identifier="I_505A4155_R" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
-      <file href="i_15c99c5e/assesment.xml"/>
+      <file href="assessments/1.6.1.assesment.xml"/>
     </resource>
-    <resource identifier="I_D83EED4A_R" type="webcontent" href="i_47745686/1.6.2_wifi_ou_données_mobiles_?_-_correction.html">
-      <file href="i_47745686/1.6.2_wifi_ou_données_mobiles_?_-_correction.html"/>
+    <!-- IMAGES  -->
+    <resource identifier="I_11F257AB_R" type="webcontent">
+      <file href="img/logo_cult-num.png"/>
     </resource>
-    <resource identifier="I_F230F387_R" type="webcontent" href="i_0aa42432/1.6.3._les_débits__correction.html">
-      <file href="i_0aa42432/1.6.3._les_débits__correction.html"/>
+    <resource identifier="I_4DD848EF_R" type="webcontent">
+      <file href="img/separateur_haut-01.png"/>
     </resource>
-    <resource identifier="I_0E95E1F3_R" type="webcontent" href="i_103048da/1.6.4_le_saviez-vous_?_ladsl_et_ses_débits_....html">
-      <file href="i_103048da/1.6.4_le_saviez-vous_?_ladsl_et_ses_débits_....html"/>
+    <resource identifier="I_6F143AAF_R" type="webcontent">
+      <file href="img/culture-numerique_mode_emploi-v04.pdf"/>
     </resource>
-    <resource identifier="I_FD33001C_R" type="webcontent" href="i_2779da3e/1.8_société__qui_décide_sur_internet_?_(version_texte).html">
-      <file href="i_2779da3e/1.8_société__qui_décide_sur_internet_?_(version_texte).html"/>
+    <resource identifier="I_852FE444_R" type="webcontent">
+      <file href="img/separateur_coffee-01.png"/>
     </resource>
-    <resource identifier="I_78608955_R" type="webcontent" href="i_e370ca1c/1.8.2_le_saviez-vous_?_comment_la_chine_censure_internet_?.html">
-      <file href="i_e370ca1c/1.8.2_le_saviez-vous_?_comment_la_chine_censure_internet_?.html"/>
+    <resource identifier="I_81D92B7B_R" type="webcontent">
+      <file href="img/logo_final_seulrond_nb-01.png"/>
     </resource>
-    <resource identifier="I_DA20800F_R" type="webcontent" href="i_29a6d11b/1.8.3_l’icann_et_la_cnil-_correction.html">
-      <file href="i_29a6d11b/1.8.3_l’icann_et_la_cnil-_correction.html"/>
+    <resource identifier="I_A2BF809D_R" type="webcontent">
+      <file href="img/separateur_bas-01.png"/>
     </resource>
-    <resource identifier="I_12762896_R" type="imswl_xmlv1p1">
-      <file href="i_b46afe24/weblink.xml"/>
+    <resource identifier="I_66EC7873_R" type="webcontent">
+      <file href="img/cult_num_s1_mod_1_internet_.svg"/>
+    </resource>
+    <resource identifier="I_E49B66A7_R" type="webcontent">
+      <file href="img/louispouzin.jpg"/>
+    </resource>
+    <resource identifier="I_EA1B7F83_R" type="webcontent">
+      <file href="img/separateur_exercices_dapprofondissement-01.png"/>
+    </resource>
+    <resource identifier="I_A8C7FD4B_R" type="webcontent">
+      <file href="img/vintoncerf.jpg"/>
+    </resource>
+    <resource identifier="I_B1500CFB_R" type="webcontent">
+      <file href="img/separateur_test_decomprehension-01.png"/>
+    </resource>
+    <resource identifier="I_EDA45C7B_R" type="webcontent">
+      <file href="img/logo_final_plat_nb-01.png"/>
+    </resource>
+    <resource identifier="I_FCB413DF_R" type="webcontent">
+      <file href="img/separateur_forum-01.png"/>
+    </resource>
+    <resource identifier="I_2C2AA410_R" type="webcontent">
+      <file href="img/logo.png"/>
+    </resource>
+    <resource identifier="I_E4682AE9_R" type="webcontent">
+      <file href="img/logo_web-01.png"/>
+    </resource>
+    <resource identifier="I_241ACDF2_R" type="webcontent">
+      <file href="img/illu_1.jpg"/>
+    </resource>
+    <resource identifier="I_BE7B627B_R" type="webcontent">
+      <file href="img/files.gif"/>
+    </resource>
+    <!-- WEBCONTENT -->
+    <resource identifier="I_517806FF_R" type="webcontent" href="webcontent/comment_répondre_aux_tests_de_compréhension_?.html">
+      <file href="webcontent/comment_répondre_aux_tests_de_compréhension_?.html"/>
+    </resource>
+    <resource identifier="I_9BB52A4C_R" type="webcontent" href="webcontent/comment_répondre_aux_exercices_dapprofondissement_?.html">
+      <file href="webcontent/comment_répondre_aux_exercices_dapprofondissement_?.html"/>
+    </resource>
+    <resource identifier="I_FEABF09F_R" type="webcontent" href="webcontent/1.1_informatique_et_numérique_(version_texte).html">
+      <file href="webcontent/1.1_informatique_et_numérique_(version_texte).html"/>
+    </resource>
+    <resource identifier="I_755F0840_R" type="webcontent" href="webcontent/1.1.2_le_numérique_dans_tous_les_domaines_-_correction.html">
+      <file href="webcontent/1.1.2_le_numérique_dans_tous_les_domaines_-_correction.html"/>
+    </resource>
+    <resource identifier="I_0161A5D5_R" type="webcontent" href="webcontent/1.1.3_le_numérique_au_quotidien_-_correction.html">
+      <file href="webcontent/1.1.3_le_numérique_au_quotidien_-_correction.html"/>
+    </resource>
+    <resource identifier="I_4D001A2D_R" type="webcontent" href="webcontent/1.1.4_le_numérique_dans_la_société_-_correction.html">
+      <file href="webcontent/1.1.4_le_numérique_dans_la_société_-_correction.html"/>
+    </resource>
+    <resource identifier="I_0AB726AC_R" type="webcontent" href="webcontent/1.2_historique_informatique_(version_texte).html">
+      <file href="webcontent/1.2_historique_informatique_(version_texte).html"/>
+    </resource>
+    <resource identifier="I_49EE0E95_R" type="webcontent" href="webcontent/1.2.3_personnages_importants_-_correction.html">
+      <file href="webcontent/1.2.3_personnages_importants_-_correction.html"/>
+    </resource>
+    <resource identifier="I_50D201E9_R" type="webcontent" href="webcontent/1.2.4_la_vitesse_des_ordinateurs_-_correction.html">
+      <file href="webcontent/1.2.4_la_vitesse_des_ordinateurs_-_correction.html"/>
+    </resource>
+    <resource identifier="I_2FE4C720_R" type="webcontent" href="webcontent/1.2.5_doù_vient_le_pc_?_-_correction.html">
+      <file href="webcontent/1.2.5_doù_vient_le_pc_?_-_correction.html"/>
+    </resource>
+    <resource identifier="I_002EDC66_R" type="webcontent" href="webcontent/1.2.6_Évolution_des_interfaces_homme-machine_-_correction.html">
+      <file href="webcontent/1.2.6_Évolution_des_interfaces_homme-machine_-_correction.html"/>
+    </resource>
+    <resource identifier="I_08BDDD49_R" type="webcontent" href="webcontent/1.3_naissance_dinternet_(version_texte).html">
+      <file href="webcontent/1.3_naissance_dinternet_(version_texte).html"/>
+    </resource>
+    <resource identifier="I_82F0BB03_R" type="webcontent" href="webcontent/1.3.2_qui_a_inventé_internet_?_-_correction.html">
+      <file href="webcontent/1.3.2_qui_a_inventé_internet_?_-_correction.html"/>
+      <dependency identifierref="I_A8C7FD4B_R"/>
+    </resource>
+    <resource identifier="I_8F743BCD_R" type="webcontent" href="webcontent/1.3.3_qui_a_accès_à_internet_?_-_correction.html">
+      <file href="webcontent/1.3.3_qui_a_accès_à_internet_?_-_correction.html"/>
+    </resource>
+    <resource identifier="I_AC5E094F_R" type="webcontent" href="webcontent/1.4_comment_ça_marche_?_(version_texte).html">
+      <file href="webcontent/1.4_comment_ça_marche_?_(version_texte).html"/>
+    </resource>
+    <resource identifier="I_A76A3381_R" type="webcontent" href="webcontent/1.4.2_combien_y-a-t-il_dadresses_ip_?.html">
+      <file href="webcontent/1.4.2_combien_y-a-t-il_dadresses_ip_?.html"/>
+    </resource>
+    <resource identifier="I_2FD7CFF1_R" type="webcontent" href="webcontent/1.4.3_les_serveurs_de_noms_-_correction.html">
+      <file href="webcontent/1.4.3_les_serveurs_de_noms_-_correction.html"/>
+    </resource>
+    <resource identifier="I_2FD9B708_R" type="webcontent" href="webcontent/1.4.4._panne_générale_-_correction.html">
+      <file href="webcontent/1.4.4._panne_générale_-_correction.html"/>
+    </resource>
+    <resource identifier="I_8E1E724A_R" type="webcontent" href="webcontent/1.5_que_se_passe-t-il_quand_on_se_connecte_à_internet_?_(version_texte).html">
+      <file href="webcontent/1.5_que_se_passe-t-il_quand_on_se_connecte_à_internet_?_(version_texte).html"/>
+    </resource>
+    <resource identifier="I_558B544D_R" type="webcontent" href="webcontent/1.5.2_utiliser_les_serveurs_de_noms_-_correction.html">
+      <file href="webcontent/1.5.2_utiliser_les_serveurs_de_noms_-_correction.html"/>
+    </resource>
+    <resource identifier="I_64A598EB_R" type="webcontent" href="webcontent/1.5.3_la_charte_informatique_de_luniversité_-_correction.html">
+      <file href="webcontent/1.5.3_la_charte_informatique_de_luniversité_-_correction.html"/>
+    </resource>
+    <resource identifier="I_2DA8AF79_R" type="webcontent" href="webcontent/1.6_les_supports_physiques_de_transmission_de_l’information_(version_texte).html">
+      <file href="webcontent/1.6_les_supports_physiques_de_transmission_de_l’information_(version_texte).html"/>
+    </resource>
+    <resource identifier="I_B73CB712_R" type="webcontent" href="webcontent/1.7_connexions_nomades_et_vitesse_de_transmission__(version_texte).html">
+      <file href="webcontent/1.7_connexions_nomades_et_vitesse_de_transmission__(version_texte).html"/>
+    </resource>
+    <resource identifier="I_D83EED4A_R" type="webcontent" href="webcontent/1.6.2_wifi_ou_données_mobiles_?_-_correction.html">
+      <file href="webcontent/1.6.2_wifi_ou_données_mobiles_?_-_correction.html"/>
+    </resource>
+    <resource identifier="I_F230F387_R" type="webcontent" href="webcontent/1.6.3._les_débits__correction.html">
+      <file href="webcontent/1.6.3._les_débits__correction.html"/>
+    </resource>
+    <resource identifier="I_0E95E1F3_R" type="webcontent" href="webcontent/1.6.4_le_saviez-vous_?_ladsl_et_ses_débits_....html">
+      <file href="webcontent/1.6.4_le_saviez-vous_?_ladsl_et_ses_débits_....html"/>
+    </resource>
+    <resource identifier="I_FD33001C_R" type="webcontent" href="webcontent/1.8_société__qui_décide_sur_internet_?_(version_texte).html">
+      <file href="webcontent/1.8_société__qui_décide_sur_internet_?_(version_texte).html"/>
+    </resource>
+    <resource identifier="I_78608955_R" type="webcontent" href="webcontent/1.8.2_le_saviez-vous_?_comment_la_chine_censure_internet_?.html">
+      <file href="webcontent/1.8.2_le_saviez-vous_?_comment_la_chine_censure_internet_?.html"/>
+    </resource>
+    <resource identifier="I_DA20800F_R" type="webcontent" href="webcontent/1.8.3_l’icann_et_la_cnil-_correction.html">
+      <file href="webcontent/1.8.3_l’icann_et_la_cnil-_correction.html"/>
     </resource>
   </resources>
 </manifest>

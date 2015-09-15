@@ -168,173 +168,173 @@
   </organizations>
   <resources>
     <!-- Images -->
-    <resource type="webcontent" href="img/logo_cult-num.png" identifier="img_0">
+    <resource href="img/logo_cult-num.png" type="webcontent" identifier="img_0">
       <file href="img/logo_cult-num.png" />
     </resource>
-    <resource type="webcontent" href="img/separateur_haut-01.png" identifier="img_1">
+    <resource href="img/separateur_haut-01.png" type="webcontent" identifier="img_1">
       <file href="img/separateur_haut-01.png" />
     </resource>
-    <resource type="webcontent" href="img/separateur_coffee-01.png" identifier="img_3">
+    <resource href="img/separateur_coffee-01.png" type="webcontent" identifier="img_3">
       <file href="img/separateur_coffee-01.png" />
     </resource>
-    <resource type="webcontent" href="img/logo_final_seulrond_nb-01.png" identifier="img_4">
+    <resource href="img/logo_final_seulrond_nb-01.png" type="webcontent" identifier="img_4">
       <file href="img/logo_final_seulrond_nb-01.png" />
     </resource>
-    <resource type="webcontent" href="img/separateur_bas-01.png" identifier="img_5">
+    <resource href="img/separateur_bas-01.png" type="webcontent" identifier="img_5">
       <file href="img/separateur_bas-01.png" />
     </resource>
-    <resource type="webcontent" href="img/cult_num_s1_mod_1_internet_.svg" identifier="img_6">
+    <resource href="img/cult_num_s1_mod_1_internet_.svg" type="webcontent" identifier="img_6">
       <file href="img/cult_num_s1_mod_1_internet_.svg" />
     </resource>
-    <resource type="webcontent" href="img/louispouzin.jpg" identifier="img_7">
+    <resource href="img/louispouzin.jpg" type="webcontent" identifier="img_7">
       <file href="img/louispouzin.jpg" />
     </resource>
-    <resource type="webcontent" href="img/separateur_exercices_dapprofondissement-01.png" identifier="img_8">
+    <resource href="img/separateur_exercices_dapprofondissement-01.png" type="webcontent" identifier="img_8">
       <file href="img/separateur_exercices_dapprofondissement-01.png" />
     </resource>
-    <resource type="webcontent" href="img/vintoncerf.jpg" identifier="img_9">
+    <resource href="img/vintoncerf.jpg" type="webcontent" identifier="img_9">
       <file href="img/vintoncerf.jpg" />
     </resource>
-    <resource type="webcontent" href="img/separateur_test_decomprehension-01.png" identifier="img_10">
+    <resource href="img/separateur_test_decomprehension-01.png" type="webcontent" identifier="img_10">
       <file href="img/separateur_test_decomprehension-01.png" />
     </resource>
-    <resource type="webcontent" href="img/logo_final_plat_nb-01.png" identifier="img_11">
+    <resource href="img/logo_final_plat_nb-01.png" type="webcontent" identifier="img_11">
       <file href="img/logo_final_plat_nb-01.png" />
     </resource>
-    <resource type="webcontent" href="img/separateur_forum-01.png" identifier="img_12">
+    <resource href="img/separateur_forum-01.png" type="webcontent" identifier="img_12">
       <file href="img/separateur_forum-01.png" />
     </resource>
-    <resource type="webcontent" href="img/logo.png" identifier="img_13">
+    <resource href="img/logo.png" type="webcontent" identifier="img_13">
       <file href="img/logo.png" />
     </resource>
-    <resource type="webcontent" href="img/files.gif" identifier="img_14">
+    <resource href="img/files.gif" type="webcontent" identifier="img_14">
       <file href="img/files.gif" />
     </resource>
-    <resource type="webcontent" href="img/logo_web-01.png" identifier="img_15">
+    <resource href="img/logo_web-01.png" type="webcontent" identifier="img_15">
       <file href="img/logo_web-01.png" />
     </resource>
-    <resource type="webcontent" href="img/illu_1.jpg" identifier="img_16">
+    <resource href="img/illu_1.jpg" type="webcontent" identifier="img_16">
       <file href="img/illu_1.jpg" />
     </resource>
     <!-- Webcontent -->
-    <resource type="webcontent" href="img/culture-numerique_mode_emploi-v04.pdf" identifier="doc_0_0">
+    <resource href="img/culture-numerique_mode_emploi-v04.pdf" type="webcontent" identifier="doc_0_0">
       <file href="img/culture-numerique_mode_emploi-v04.pdf" />
     </resource>
-    <resource type="webcontent" href="webcontent/comment_répondre_aux_tests_de_compréhension_?.html" identifier="doc_0_1">
+    <resource href="webcontent/comment_répondre_aux_tests_de_compréhension_?.html" type="webcontent" identifier="doc_0_1">
       <file href="webcontent/comment_répondre_aux_tests_de_compréhension_?.html" />
       <dependency identifierref="img_10" />
     </resource>
-    <resource type="webcontent" href="webcontent/comment_répondre_aux_exercices_dapprofondissement_?.html" identifier="doc_0_2">
+    <resource href="webcontent/comment_répondre_aux_exercices_dapprofondissement_?.html" type="webcontent" identifier="doc_0_2">
       <file href="webcontent/comment_répondre_aux_exercices_dapprofondissement_?.html" />
       <dependency identifierref="img_8" />
     </resource>
-    <resource type="imsdt_xmlv1p1" href="discussions/FORUM_DE_QUESTIONS.discussion.xml" identifier="doc_0_3">
+    <resource href="discussions/FORUM_DE_QUESTIONS.discussion.xml" type="imsdt_xmlv1p1" identifier="doc_0_3">
       <file href="discussions/FORUM_DE_QUESTIONS.discussion.xml" />
     </resource>
-    <resource type="imsdt_xmlv1p1" href="discussions/FORUM_DES_NOUVELLES.discussion.xml" identifier="doc_0_4">
+    <resource href="discussions/FORUM_DES_NOUVELLES.discussion.xml" type="imsdt_xmlv1p1" identifier="doc_0_4">
       <file href="discussions/FORUM_DES_NOUVELLES.discussion.xml" />
     </resource>
-    <resource type="webcontent" href="webcontent/1.1_informatique_et_numérique_(version_texte).html" identifier="doc_1_0">
+    <resource href="webcontent/1.1_informatique_et_numérique_(version_texte).html" type="webcontent" identifier="doc_1_0">
       <file href="webcontent/1.1_informatique_et_numérique_(version_texte).html" />
     </resource>
-    <resource type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="assessments/1.1.1.assesment.xml" identifier="doc_1_1">
+    <resource href="assessments/1.1.1.assesment.xml" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" identifier="doc_1_1">
       <file href="assessments/1.1.1.assesment.xml" />
     </resource>
-    <resource type="webcontent" href="webcontent/1.1.2_le_numérique_dans_tous_les_domaines_-_correction.html" identifier="doc_1_2">
+    <resource href="webcontent/1.1.2_le_numérique_dans_tous_les_domaines_-_correction.html" type="webcontent" identifier="doc_1_2">
       <file href="webcontent/1.1.2_le_numérique_dans_tous_les_domaines_-_correction.html" />
     </resource>
-    <resource type="webcontent" href="webcontent/1.1.3_le_numérique_au_quotidien_-_correction.html" identifier="doc_1_3">
+    <resource href="webcontent/1.1.3_le_numérique_au_quotidien_-_correction.html" type="webcontent" identifier="doc_1_3">
       <file href="webcontent/1.1.3_le_numérique_au_quotidien_-_correction.html" />
     </resource>
-    <resource type="webcontent" href="webcontent/1.1.4_le_numérique_dans_la_société_-_correction.html" identifier="doc_1_4">
+    <resource href="webcontent/1.1.4_le_numérique_dans_la_société_-_correction.html" type="webcontent" identifier="doc_1_4">
       <file href="webcontent/1.1.4_le_numérique_dans_la_société_-_correction.html" />
     </resource>
-    <resource type="webcontent" href="webcontent/1.2_historique_informatique_(version_texte).html" identifier="doc_2_0">
+    <resource href="webcontent/1.2_historique_informatique_(version_texte).html" type="webcontent" identifier="doc_2_0">
       <file href="webcontent/1.2_historique_informatique_(version_texte).html" />
     </resource>
-    <resource type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="assessments/1.2.1.assesment.xml" identifier="doc_2_1">
+    <resource href="assessments/1.2.1.assesment.xml" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" identifier="doc_2_1">
       <file href="assessments/1.2.1.assesment.xml" />
     </resource>
-    <resource type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="assessments/1.2.2.assesment.xml" identifier="doc_2_2">
+    <resource href="assessments/1.2.2.assesment.xml" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" identifier="doc_2_2">
       <file href="assessments/1.2.2.assesment.xml" />
     </resource>
-    <resource type="webcontent" href="webcontent/1.2.3_personnages_importants_-_correction.html" identifier="doc_2_3">
+    <resource href="webcontent/1.2.3_personnages_importants_-_correction.html" type="webcontent" identifier="doc_2_3">
       <file href="webcontent/1.2.3_personnages_importants_-_correction.html" />
     </resource>
-    <resource type="webcontent" href="webcontent/1.2.4_la_vitesse_des_ordinateurs_-_correction.html" identifier="doc_2_4">
+    <resource href="webcontent/1.2.4_la_vitesse_des_ordinateurs_-_correction.html" type="webcontent" identifier="doc_2_4">
       <file href="webcontent/1.2.4_la_vitesse_des_ordinateurs_-_correction.html" />
     </resource>
-    <resource type="webcontent" href="webcontent/1.2.5_doù_vient_le_pc_?_-_correction.html" identifier="doc_2_5">
+    <resource href="webcontent/1.2.5_doù_vient_le_pc_?_-_correction.html" type="webcontent" identifier="doc_2_5">
       <file href="webcontent/1.2.5_doù_vient_le_pc_?_-_correction.html" />
     </resource>
-    <resource type="webcontent" href="webcontent/1.2.6_Évolution_des_interfaces_homme-machine_-_correction.html" identifier="doc_2_6">
+    <resource href="webcontent/1.2.6_Évolution_des_interfaces_homme-machine_-_correction.html" type="webcontent" identifier="doc_2_6">
       <file href="webcontent/1.2.6_Évolution_des_interfaces_homme-machine_-_correction.html" />
     </resource>
-    <resource type="webcontent" href="webcontent/1.3_naissance_dinternet_(version_texte).html" identifier="doc_3_0">
+    <resource href="webcontent/1.3_naissance_dinternet_(version_texte).html" type="webcontent" identifier="doc_3_0">
       <file href="webcontent/1.3_naissance_dinternet_(version_texte).html" />
     </resource>
-    <resource type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="assessments/1.3.1.assesment.xml" identifier="doc_3_1">
+    <resource href="assessments/1.3.1.assesment.xml" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" identifier="doc_3_1">
       <file href="assessments/1.3.1.assesment.xml" />
     </resource>
-    <resource type="webcontent" href="webcontent/1.3.2_qui_a_inventé_internet_?_-_correction.html" identifier="doc_3_2">
+    <resource href="webcontent/1.3.2_qui_a_inventé_internet_?_-_correction.html" type="webcontent" identifier="doc_3_2">
       <file href="webcontent/1.3.2_qui_a_inventé_internet_?_-_correction.html" />
       <dependency identifierref="img_9" />
     </resource>
-    <resource type="webcontent" href="webcontent/1.3.3_qui_a_accès_à_internet_?_-_correction.html" identifier="doc_3_3">
+    <resource href="webcontent/1.3.3_qui_a_accès_à_internet_?_-_correction.html" type="webcontent" identifier="doc_3_3">
       <file href="webcontent/1.3.3_qui_a_accès_à_internet_?_-_correction.html" />
     </resource>
-    <resource type="webcontent" href="webcontent/1.4_comment_ça_marche_?_(version_texte).html" identifier="doc_4_0">
+    <resource href="webcontent/1.4_comment_ça_marche_?_(version_texte).html" type="webcontent" identifier="doc_4_0">
       <file href="webcontent/1.4_comment_ça_marche_?_(version_texte).html" />
     </resource>
-    <resource type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="assessments/1.4.1.assesment.xml" identifier="doc_4_1">
+    <resource href="assessments/1.4.1.assesment.xml" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" identifier="doc_4_1">
       <file href="assessments/1.4.1.assesment.xml" />
     </resource>
-    <resource type="webcontent" href="webcontent/1.4.2_combien_y-a-t-il_dadresses_ip_?.html" identifier="doc_4_2">
+    <resource href="webcontent/1.4.2_combien_y-a-t-il_dadresses_ip_?.html" type="webcontent" identifier="doc_4_2">
       <file href="webcontent/1.4.2_combien_y-a-t-il_dadresses_ip_?.html" />
     </resource>
-    <resource type="webcontent" href="webcontent/1.4.3_les_serveurs_de_noms_-_correction.html" identifier="doc_4_3">
+    <resource href="webcontent/1.4.3_les_serveurs_de_noms_-_correction.html" type="webcontent" identifier="doc_4_3">
       <file href="webcontent/1.4.3_les_serveurs_de_noms_-_correction.html" />
     </resource>
-    <resource type="webcontent" href="webcontent/1.4.4._panne_générale_-_correction.html" identifier="doc_4_4">
+    <resource href="webcontent/1.4.4._panne_générale_-_correction.html" type="webcontent" identifier="doc_4_4">
       <file href="webcontent/1.4.4._panne_générale_-_correction.html" />
     </resource>
-    <resource type="webcontent" href="webcontent/1.5_que_se_passe-t-il_quand_on_se_connecte_à_internet_?_(version_texte).html" identifier="doc_5_0">
+    <resource href="webcontent/1.5_que_se_passe-t-il_quand_on_se_connecte_à_internet_?_(version_texte).html" type="webcontent" identifier="doc_5_0">
       <file href="webcontent/1.5_que_se_passe-t-il_quand_on_se_connecte_à_internet_?_(version_texte).html" />
     </resource>
-    <resource type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="assessments/1.5.1.assesment.xml" identifier="doc_5_1">
+    <resource href="assessments/1.5.1.assesment.xml" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" identifier="doc_5_1">
       <file href="assessments/1.5.1.assesment.xml" />
     </resource>
-    <resource type="webcontent" href="webcontent/1.5.2_utiliser_les_serveurs_de_noms_-_correction.html" identifier="doc_5_2">
+    <resource href="webcontent/1.5.2_utiliser_les_serveurs_de_noms_-_correction.html" type="webcontent" identifier="doc_5_2">
       <file href="webcontent/1.5.2_utiliser_les_serveurs_de_noms_-_correction.html" />
     </resource>
-    <resource type="webcontent" href="webcontent/1.5.3_la_charte_informatique_de_luniversité_-_correction.html" identifier="doc_5_3">
+    <resource href="webcontent/1.5.3_la_charte_informatique_de_luniversité_-_correction.html" type="webcontent" identifier="doc_5_3">
       <file href="webcontent/1.5.3_la_charte_informatique_de_luniversité_-_correction.html" />
     </resource>
-    <resource type="webcontent" href="webcontent/1.6_les_supports_physiques_de_transmission_de_l’information_(version_texte).html" identifier="doc_6_0">
+    <resource href="webcontent/1.6_les_supports_physiques_de_transmission_de_l’information_(version_texte).html" type="webcontent" identifier="doc_6_0">
       <file href="webcontent/1.6_les_supports_physiques_de_transmission_de_l’information_(version_texte).html" />
     </resource>
-    <resource type="webcontent" href="webcontent/1.7_connexions_nomades_et_vitesse_de_transmission__(version_texte).html" identifier="doc_6_1">
+    <resource href="webcontent/1.7_connexions_nomades_et_vitesse_de_transmission__(version_texte).html" type="webcontent" identifier="doc_6_1">
       <file href="webcontent/1.7_connexions_nomades_et_vitesse_de_transmission__(version_texte).html" />
     </resource>
-    <resource type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" href="assessments/1.6.1.assesment.xml" identifier="doc_6_2">
+    <resource href="assessments/1.6.1.assesment.xml" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment" identifier="doc_6_2">
       <file href="assessments/1.6.1.assesment.xml" />
     </resource>
-    <resource type="webcontent" href="webcontent/1.6.2_wifi_ou_données_mobiles_?_-_correction.html" identifier="doc_6_3">
+    <resource href="webcontent/1.6.2_wifi_ou_données_mobiles_?_-_correction.html" type="webcontent" identifier="doc_6_3">
       <file href="webcontent/1.6.2_wifi_ou_données_mobiles_?_-_correction.html" />
     </resource>
-    <resource type="webcontent" href="webcontent/1.6.3._les_débits__correction.html" identifier="doc_6_4">
+    <resource href="webcontent/1.6.3._les_débits__correction.html" type="webcontent" identifier="doc_6_4">
       <file href="webcontent/1.6.3._les_débits__correction.html" />
     </resource>
-    <resource type="webcontent" href="webcontent/1.8_société__qui_décide_sur_internet_?_(version_texte).html" identifier="doc_7_0">
+    <resource href="webcontent/1.8_société__qui_décide_sur_internet_?_(version_texte).html" type="webcontent" identifier="doc_7_0">
       <file href="webcontent/1.8_société__qui_décide_sur_internet_?_(version_texte).html" />
     </resource>
-    <resource type="webcontent" href="webcontent/1.8.2_le_saviez-vous_?_comment_la_chine_censure_internet_?.html" identifier="doc_7_1">
+    <resource href="webcontent/1.8.2_le_saviez-vous_?_comment_la_chine_censure_internet_?.html" type="webcontent" identifier="doc_7_1">
       <file href="webcontent/1.8.2_le_saviez-vous_?_comment_la_chine_censure_internet_?.html" />
     </resource>
-    <resource type="webcontent" href="webcontent/1.8.3_l’icann_et_la_cnil-_correction.html" identifier="doc_7_2">
+    <resource href="webcontent/1.8.3_l’icann_et_la_cnil-_correction.html" type="webcontent" identifier="doc_7_2">
       <file href="webcontent/1.8.3_l’icann_et_la_cnil-_correction.html" />
     </resource>
-    <resource type="imswl_xmlv1p1" href="weblinks/ENQUETE_DE_FIN_DE_COURS.weblink.xml" identifier="doc_7_3">
+    <resource href="weblinks/ENQUETE_DE_FIN_DE_COURS.weblink.xml" type="imswl_xmlv1p1" identifier="doc_7_3">
       <file href="weblinks/ENQUETE_DE_FIN_DE_COURS.weblink.xml" />
     </resource>
   </resources>

@@ -26,7 +26,7 @@ def usage():
 Usage:
    exporte les fichiers depuis l'arborescence git pour les comprimer dans une archive .imscc.
 
-   toIMS dirin fileout
+   toIMS fileout
 """
     print (str)
     exit(1)
@@ -117,11 +117,11 @@ def generateIMSManifest():
                                  # add dependency
                                  doc.stag('dependency', identifierref=images[img])
                          # rewrite absolute href links
-                         body = html_doc.find('body')
-                         body.rewrite_links(replaceLink, base_href=data["base_url"])
-                         f = open(href,"wb")
-                         f.write(html.tostring(body))
-                         f.close()
+                        #  body = html_doc.find('body')
+                        #  body.rewrite_links(replaceLink)
+                        #  f = open(href,"wb")
+                        #  f.write(html.tostring(body))
+                        #  f.close()
 
     doc.asis("</manifest>")
     imsfile = open('imsmanifest.xml', 'w')
@@ -132,16 +132,27 @@ def generateIMSManifest():
 
 def main(argv):
     """ toIMS is a utility to help building imscc archives for exporting curent material to Moodle"""
-    if len(sys.argv) != 3:
+    if len(sys.argv) != 2:
         usage()
 
-    dirin = sys.argv[1]
-    fileout = sys.argv[2]
+    fileout = sys.argv[1]
+    print (" Fileout : %s " % (fileout))
 
     generateIMSManifest()
+    print (" Imsmanifest.xml done. Compressing archive in %s " % (os.getcwd()))
 
     # Compress all directory
-    
+    zipf = zipfile.ZipFile(fileout, 'w')
+
+    for root, dirs, files in os.walk(os.getcwd()):
+        for file in files:
+            filepath = os.path.join(root, file)
+            if file != fileout and filepath.find('.git') == -1:
+                print (" Ading %s to archive " % (filepath))
+                zipf.write(os.path.join(root, file))
+
+    zipf.close()
+
 
 ############### main ################
 if __name__ == "__main__":

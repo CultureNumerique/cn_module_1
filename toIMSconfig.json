@@ -50,13 +50,28 @@
                 "type":"assessments"
                 },
                 {
+                "title":"1.1.2 Le numérique dans tous les domaines",
+                "source_file":"assignment/1-1-2-le-numerique-dans-tous-les-domaines.html",
+                "type":"webcontent"
+                },
+                {
                 "title":"1.1.2 Le numérique dans tous les domaines - Correction",
                 "source_file":"webcontent/1.1.2_le_numérique_dans_tous_les_domaines_-_correction.html",
                 "type":"webcontent"
                 },
                 {
+                "title":"1.1.3 Le numérique au quotidien",
+                "source_file":"assignment/1-1-3-le-numerique-au-quotidien.html",
+                "type":"webcontent"
+                },
+                {
                 "title":"1.1.3 Le numérique au quotidien - Correction",
                 "source_file":"webcontent/1.1.3_le_numérique_au_quotidien_-_correction.html",
+                "type":"webcontent"
+                },
+                {
+                "title":"1.1.4 Le numérique dans la société",
+                "source_file":"assignment/1-1-4-le-numerique-dans-la-societe.html",
                 "type":"webcontent"
                 },
                 {
@@ -84,10 +99,19 @@
                 "type":"assessments"
                 },
                 {
+                "title":"1.2.3 Personnages importants",
+                "source_file":"assignment/1-2-3-des-personnages-importants.html",
+                "type":"webcontent"
+                },
+                {
                 "title":"1.2.3 Personnages importants - Correction",
                 "source_file":"webcontent/1.2.3_personnages_importants_-_correction.html",
-				"type":"webcontent",
-		"type":"webcontent"
+				"type":"webcontent"
+                },
+                {
+                "title":"1.2.4 la vitesse des ordinateurs",
+                "source_file":"assignment/1-2-4-la-vitesse-des-ordinateurs.html",
+                "type":"webcontent"
                 },
                 {
                 "title":"1.2.4 la vitesse des ordinateurs - Correction",
@@ -95,9 +119,19 @@
 				"type":"webcontent"
                 },
                 {
+                "title":"1.2.5 D'où vient le PC ?",
+                "source_file":"assignment/1-2-5-dou-vient-le-pc.html",
+                "type":"webcontent"
+                },
+                {
                 "title":"1.2.5 D'où vient le PC ? - Correction",
                 "source_file":"webcontent/1.2.5_doù_vient_le_pc_?_-_correction.html",
 				"type":"webcontent"
+                },
+                {
+                "title":"1.2.6 Évolution des interfaces homme-machine",
+                "source_file":"assignment/1-2-6-les-interfaces-homme-machine.html",
+                "type":"webcontent"
                 },
                 {
                 "title":"1.2.6 Évolution des interfaces homme-machine - Correction",
@@ -119,9 +153,19 @@
                 "type":"assessments"
                 },
                 {
+                "title":"1.3.2 Qui a inventé Internet ?",
+                "source_file":"assignment/1-3-2-qui-a-invente-internet.html",
+                "type":"webcontent"
+                },
+                {
                 "title":"1.3.2 Qui a inventé Internet ? - Correction",
                 "source_file":"webcontent/1.3.2_qui_a_inventé_internet_?_-_correction.html",
 				"type":"webcontent"
+                },
+                {
+                "title":"1.3.3 Qui a accès à internet ?",
+                "source_file":"assignment/1-3-3-qui-a-acces-a-internet.html",
+                "type":"webcontent"
                 },
                 {
                 "title":"1.3.3 Qui a accès à internet ? - Correction",
@@ -153,6 +197,11 @@
 				"type":"webcontent"
                 },
                 {
+                "title":"1.4.4. Panne générale ",
+                "source_file":"assignment/1-4-4-panne-generale.html",
+                "type":"webcontent"
+                },
+                {
                 "title":"1.4.4. Panne générale - Correction",
                 "source_file":"webcontent/1.4.4._panne_générale_-_correction.html",
 				"type":"webcontent"
@@ -172,9 +221,19 @@
                 "type":"assessments"
                 },
                 {
+                "title":"1.5.2 Utiliser les serveurs de noms",
+                "source_file":"assignment/1-5-2-utiliser-les-serveurs-de-noms.html",
+                "type":"webcontent"
+                },
+                {
                 "title":"1.5.2 Utiliser les serveurs de noms - Correction",
                 "source_file":"webcontent/1.5.2_utiliser_les_serveurs_de_noms_-_correction.html",
 				"type":"webcontent"
+                },
+                {
+                "title":"1.5.3 La charte informatique de l'université",
+                "source_file":"assignment/1-5-3-la-charte-informatique-de-luniversite.html",
+                "type":"webcontent"
                 },
                 {
                 "title":"1.5.3 La charte informatique de l'université - Correction",
@@ -201,9 +260,19 @@
                 "type":"assessments"
                 },
                 {
+                "title":"1.6.2 Wifi ou Données mobiles",
+                "source_file":"assignment/1-6-2-wifi-ou-donnees-mobiles.html",
+                "type":"webcontent"
+                },
+                {
                 "title":"1.6.2 Wifi ou Données mobiles ? - Correction",
                 "source_file":"webcontent/1.6.2_wifi_ou_données_mobiles_?_-_correction.html",
 				"type":"webcontent"
+                },
+                {
+                "title":"1.6.3. Les débits",
+                "source_file":"assignment/1-6-3-les-debits.html",
+                "type":"webcontent"
                 },
                 {
                 "title":"1.6.3. Les débits : correction",
@@ -225,7 +294,12 @@
 				"type":"webcontent"
                 },
                 {
-                "title":"1.8.3 L’ICANN et la CNIL- correction",
+                "title":"1.8.3 L’ICANN et la CNIL",
+                "source_file":"assignment/1-8-3-licann-et-la-cnil.html",
+                "type":"webcontent"
+                },
+                {
+                "title":"1.8.3 L’ICANN et la CNIL - correction",
                 "source_file":"webcontent/1.8.3_l’icann_et_la_cnil-_correction.html",
 				"type":"webcontent"
                 },

@@ -42,8 +42,6 @@ def generateIMSManifest():
 
     with open('toIMSconfig.json', encoding='utf-8') as data_file:
         data = json.load(data_file)
-    #pprint(data)
-
     # create magic yattag triple
     doc, tag, text = Doc().tagtext()
     # open tag 'manifest' with default content:
@@ -95,7 +93,7 @@ def generateIMSManifest():
                 pass # avoid duplicating resources
             else:
                 doc_id = "img_"+str(idx)
-                images[filename] = doc_id
+                images[filename] = doc_id # store img id for further reference
                 with tag('resource', identifier=doc_id, type="webcontent", href="img/"+filename):
                     doc.stag('file', href="img/"+filename)
 
@@ -131,15 +129,13 @@ def generateIMSManifest():
 
 
 def main(argv):
-    """ toIMS is a utility to help building imscc archives for exporting curent material to Moodle"""
+    """ toIMS is a utility to help building imscc archives for exporting curent material to Moodle """
     if len(sys.argv) != 2:
         usage()
-
     fileout = sys.argv[1]
-    print (" Fileout : %s " % (fileout))
 
     generateIMSManifest()
-    print (" Imsmanifest.xml done. Compressing archive in %s " % (os.getcwd()))
+    print (" imsmanifest.xml saved. Compressing archive in %s " % (os.getcwd()))
 
     # Compress all directory
     zipf = zipfile.ZipFile(fileout, 'w')
@@ -148,7 +144,7 @@ def main(argv):
         for file in files:
             filepath = os.path.join(root, file)
             if file != fileout and filepath.find('.git') == -1:
-                print (" Ading %s to archive " % (filepath))
+                print (" Adding %s to archive " % (filepath))
                 zipf.write(os.path.join(root, file))
 
     zipf.close()

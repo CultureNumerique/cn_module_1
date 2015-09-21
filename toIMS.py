@@ -26,7 +26,7 @@ def usage():
 Usage:
    exporte les fichiers depuis l'arborescence git pour les comprimer dans une archive .imscc.
 
-   toIMS fileout
+   toIMS config_filein fileout
 """
     print (str)
     exit(1)
@@ -37,11 +37,8 @@ def replaceLink(link):
     return link.replace("__BASE__/", '')
 
 
-def generateIMSManifest():
-    """ parse config file toIMSconfig.json and recreate imsmanifest.xml """
-
-    with open('toIMSconfig.json', encoding='utf-8') as data_file:
-        data = json.load(data_file)
+def generateIMSManifest(data):
+    """ parse data from config file 'toIMSconfig.json' and recreate imsmanifest.xml """
     # create magic yattag triple
     doc, tag, text = Doc().tagtext()
     # open tag 'manifest' with default content:
@@ -114,7 +111,7 @@ def generateIMSManifest():
                              if img in images:
                                  # add dependency
                                  doc.stag('dependency', identifierref=images[img])
-                         # rewrite absolute href links
+                        # rewrite absolute href links
                         #  body = html_doc.find('body')
                         #  body.rewrite_links(replaceLink)
                         #  f = open(href,"wb")
@@ -130,22 +127,31 @@ def generateIMSManifest():
 
 def main(argv):
     """ toIMS is a utility to help building imscc archives for exporting curent material to Moodle """
-    if len(sys.argv) != 2:
+    if len(sys.argv) != 3:
         usage()
-    fileout = sys.argv[1]
 
-    generateIMSManifest()
+    filein = sys.argv[1]
+    fileout = sys.argv[2]
+    # add .zip if not there
+    if fileout.rsplit('.', 1)[1] != 'zip':
+        fileout += '.zip'
+
+    # load data from filin
+    with open(filein, encoding='utf-8') as data_file:
+        data = json.load(data_file)
+    # parse data and generate imsmanifest.xml
+    generateIMSManifest(data)
     print (" imsmanifest.xml saved. Compressing archive in %s " % (os.getcwd()))
 
-    # Compress all directory
+    # Compress relevant files
     zipf = zipfile.ZipFile(fileout, 'w')
-
-    for root, dirs, files in os.walk(os.getcwd()):
-        for file in files:
-            filepath = os.path.join(root, file)
-            if file != fileout and filepath.find('.git') == -1:
-                print (" Adding %s to archive " % (filepath))
-                zipf.write(os.path.join(root, file))
+    zipf.write(os.getcwd()+'/imsmanifest.xml')
+    for dir_name in data['directories_to_ims']:
+        for file in os.listdir(dir_name):
+            filepath = os.path.join(os.getcwd(), dir_name)
+            filepath = os.path.join(filepath, file)
+            print (" Adding %s to archive " % (filepath))
+            zipf.write(filepath)
 
     zipf.close()
 

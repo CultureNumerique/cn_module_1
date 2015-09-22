@@ -1,0 +1,405 @@
+/* ---------- GENERAL STYLES ---------- */
+html, body, .container {
+    height: 100%;
+}
+
+body {
+	background-color: #fff;
+	color: #222;
+	letter-spacing: 1px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+body > .container {
+	height: auto;
+	min-height: 100%;
+}
+
+hr {
+	background-color: #ddd;
+    border: 0 none;
+    height: 1px;
+	width: 75%;
+}
+
+h1,
+h2,
+h3 {
+	font-weight: normal;
+	color: #a29797;
+}
+
+a {
+	color: #555;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+ul li {
+	list-style-type: square;
+}
+
+/*  ------  MENU --------*/
+nav.menu {
+    width: 20%;
+    height: 100%;
+    position: fixed;
+	padding: 2%;
+}
+
+
+/* --------- CONTENT -----------*/
+main.content {
+    width: 50%;
+    height: auto;
+    position: absolute;
+    right: 0;
+	padding-bottom: 3em;
+}
+
+
+
+/* ---------- HEADER ---------- */
+
+body > header {
+	margin: 0 0 20px 0;
+	letter-spacing: 5px;
+	color: #222;
+	text-align: center;
+}
+
+body > header > h1 {
+    width: 100%;
+	height: 80px;
+	background: url("img/logo_web-01.png") no-repeat;
+	background-position: center;
+	text-indent : -9999px;
+}
+
+header h1 a {
+	color: #222;
+}
+
+header h1 a:hover {
+	text-decoration: none;
+}
+
+header h2 {
+	font-size: 1em;
+	margin: 0;
+}
+
+/* ---------- SECTION ---------- */
+
+section {
+	overflow: hidden;
+}
+
+#container {
+	overflow: hidden;
+	padding: 40px;
+	border-radius: 4px 4px 4px 4px;
+	border: 1px dotted #ddd;
+	/*background: #eee;*/
+	margin-top: 40px;
+}
+
+.directory {
+	margin-bottom: 20px;
+}
+.directory:first-letter{
+	text-transform: uppercase;
+}
+.directory span {
+	background-color: #111;
+	color: #fff;
+	padding: 6px 10px 6px 10px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+
+
+
+/* ---------- FOOTER ---------- */
+
+footer {
+	clear: both;
+	position: relative;
+	height: 3em;
+	margin-top: -3em;
+	color: #C8BEBE;
+	padding: 20px;
+	text-align: center;
+	font-size: 0.9em;
+}
+
+footer p {
+	margin: 0;
+}
+
+footer a {
+	color: #AFA70E;
+}
+
+footer a:hover {
+	color: #C84B24;
+}
+
+.copyright {
+	font-size: 0.8em;
+	margin-top: 15px;
+}
+
+
+
+/* ---------- TABLE ---------- */
+table, th, td {
+	border: 0px;
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+
+@media screen and (max-width:800px) {
+
+	nav {
+		padding: 5px 20px;
+		text-align: center;
+	}
+
+	nav li {
+		display: block;
+		margin: 10px 0;
+	}
+
+	body > header {
+		margin: 0 20px 20px 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	#container {
+		margin: 0 20px 20px 20px;
+		padding: 20px;
+	}
+
+	.width-sidebar,
+	aside {
+		width: 100%;
+	}
+
+	button,
+	input,
+	select,
+	textarea {
+		max-width: 100%;
+}
+
+	aside {
+		margin-top: 50px;
+	}
+
+}
+/* ---------- RESPONSIVE VIDEO ---------- */
+iframe,
+          embed,
+          object {
+            max-width: 100%;
+          }
+
+          .container2 {
+            width:95%;
+           margin:0px auto;
+
+          }
+
+          .vendor {
+            padding: 2%;
+            margin-bottom: 2em;
+          }
+
+/* ---------- SIDEBAR ---------- */
+
+aside {
+	float: right;
+	width: 30%;
+}
+
+aside h3 {
+	color: #111;
+	font-size: 1.3em;
+	margin: 0 0 15px 0;
+}
+
+aside a {
+	color: #555;
+}
+
+aside ul {
+	margin: 0 0 30px 0;
+}
+
+aside li:first-letter {
+	text-transform: uppercase;
+}
+
+.rss {
+	background-image: url(../img/rss.png);
+	background-repeat: no-repeat;
+	line-height: 1;
+	margin: 10px 0;
+	padding-left: 20px;
+}
+
+
+/* ---------- ARTICLE / PAGE ---------- */
+
+.width-sidebar {
+	float: left;
+	width: 65%;
+}
+
+.full-width {
+	width:100%;
+}
+
+article header h1 {
+	color: #0C6D95;
+	line-height: 1.1;
+	margin: 0;
+}
+
+article header h1 a {
+	color: #111;
+}
+article header h1 a:hover {
+	color: #C84B24;
+}
+
+article header {
+	background-color: transparent;
+	color: inherit;
+	padding: 0;
+	text-align: left;
+}
+
+article header p {
+	color: #777;
+	font-size: 0.9em;
+	margin-bottom: 0;
+}
+
+article section {
+	background-color: inherit;
+	padding: 0;
+}
+
+article img {
+	margin: 0 5px;
+}
+
+article footer {
+	background-color: inherit;
+	color: #777;
+	font-size: 0.9em;
+	margin-bottom: 50px;
+	padding: 0;
+	text-align: left;
+}
+
+article a{
+	color: #AFA70E;
+}
+
+article a:hover {
+	color: #C84B24;
+}
+
+.more {
+	font-size: 0.8em;
+}
+
+
+
+/* ---------- PAGINATION ---------- */
+
+#pagination {
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+#pagination span,
+#pagination a {
+	display: inline-block;
+	margin: 0;
+	padding: 5px;
+}
+
+#pagination a {
+	background-color: #333;
+	color: #fff;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+#pagination a:hover {
+	background-color: #444;
+	color: #eee;
+	text-decoration: none;
+}
+
+#pagination span:first-letter,
+#pagination a:first-letter {
+	text-transform: uppercase;
+}
+
+/* ---------- iFRAME --------- */
+
+iframe {
+	border : 3px solid #ddd;
+}
+
+/* ---------- NAV ---------- */
+/*
+nav {
+	font-size: 1em;
+	padding: 8px 0 8px 0;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight:bold;
+
+}
+
+nav ul {
+	margin: 0;
+}
+
+nav li {
+	margin: 0 10px 0 0;
+	display: inline;
+	list-style-type: none;
+}
+
+nav li a {
+	color: #AFA70E;
+	padding: 6px 10px 6px 10px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+nav li a:hover {
+	text-decoration: none;
+	color: #fff;
+	background-color: #C84B24;
+
+nav li a.active {
+	color: #fff;
+	background-color: #AFA70E;
+}*/

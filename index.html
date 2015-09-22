@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
+    <title>Culture Numérique - Test export cours HTML</title>
+    <link rel="icon" href="http://culturenumerique.univ-lille3.fr/themes/cultnum/img/favicon.png" />
+    <link rel="stylesheet" href="reset.css" media="screen"/>
+    <link rel="stylesheet" href="style.css" media="screen"/>
+	<script type="text/javascript" src="http://culturenumerique.univ-lille3.fr/plugins/jquery/jquery.min.js"></script>
+
+	<!-- <link rel="stylesheet" type="text/css" href="http://culturenumerique.univ-lille3.fr/plugins/spxlightbox/assets/swipebox/source/swipebox.css" />
+	<link rel="stylesheet" type="text/css" href="http://culturenumerique.univ-lille3.fr/plugins/spxlightbox/assets/zoombox/zoombox.css" />
+	<link rel="stylesheet" type="text/css" href="http://culturenumerique.univ-lille3.fr/plugins/spxlightbox/assets/prettyphoto/css/prettyPhoto.css" /> -->
+</head>
+
+<body id="top" class="static">
+    <!--  HEADER -->
+	<header role="banner">
+		<h1><a class="maintitle" href="http://culturenumerique.univ-lille3.fr/" title="Culture Numérique">Culture Numérique</a></h1>
+		<h2>Cours UE10 - 2e semestre - 2014-2015 - Version HTML</h2>
+	</header>
+    <!--  NAVIGATION MENU -->
+    <nav class="menu">
+        <h2>Navigation</h2>
+        <ul>
+            <li><h3><a href="#" data-href="/webcontent/intro.html">Introduction</a></h3></li>
+            <li><h4><a href="/webcontent/comment_répondre_aux_tests_de_compréhension_?.html">Comment répondre aux tests de compréhension ?</a></h4></li>
+            <li><h4><a href="/webcontent/comment_répondre_aux_exercices_dapprofondissement_?.html">Comment répondre aux exercices d'approfondissement ?</a></h4></li>
+            <li><h3><a href="/videos/1.1_informatique_et_numérique__version_video_.html">Informatique et Numérique</a></h3></li>
+            <li><h4><a href="/assignment/1-1-2-le-numerique-dans-tous-les-domaines.html">Le numérique dans tous les domaines (Exercice)</a></h4></li>
+            <li><h4><a href="/webcontent/1.1.2_le_numérique_dans_tous_les_domaines_-_correction.html">Le numérique dans tous les domaines (Correction)</a></h4></li>
+        </ul>
+    </nav>
+    <!--  MAIN CONTENT -->
+    <main class="content">
+
+    </main>
+
+    <!-- SCRIPTs  -->
+    <script type="text/javascript">
+        $(function(){
+            $(".menu ul li a").click(function(e){
+                e.preventDefault()
+                $('.content').load($(this).attr('data-href'));
+                });
+        });
+    </script>
+
+    <!--  FOOTER -->
+    <footer role="contentinfo">
+    	<table>
+        	<tr>
+        	    <td><img src="http://culturenumerique.univ-lille3.fr/themes/cultnum/img/ul3.png" title="" alt="Lille 3" /></td>
+            	<td><p><a class="maintitle" href="http://culturenumerique.univ-lille3.fr/" title="Culture Numérique">Culture Numérique</a> - 2015 - Site </p</td>
+        	</tr>
+    	</table>
+    </footer>
+</body>
+</html>

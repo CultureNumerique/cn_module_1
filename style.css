@@ -1,27 +1,26 @@
-/* ---------- GENERAL STYLES ---------- */
-html, body, .container {
-    /*height: 100%;*/
-}
+/*-----------------------
+Divers
+-------------------------*/
+
+@charset "UTF-8";
+/* CSS Document */
+
+
+/* ---------- COLORS & STYLES ---------- */
+
+/*-------------------------*/
+/*  ------  GENERAL --------*/
+/*-------------------------*/
 
 body {
+	font-size:100%;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	background-color: #fff;
 	color: #222;
-	/*letter-spacing: 1px;*/
-	max-width: 1200px;
-	margin: 0 auto;
 }
 
-body > .container {
-	height: auto;
-	min-height: 100%;
-}
+/*  ------  TITLES & TEXT --------*/
 
-hr {
-	background-color: #ddd;
-    border: 0 none;
-    height: 1px;
-	width: 75%;
-}
 
 h1,
 h2,
@@ -30,33 +29,209 @@ h3 {
 	color: #a29797;
 }
 
+p {
+	margin: 0;
+}
+
+/*  ------  LINKS --------*/
+
 a {
 	color: #555;
 	text-decoration: none;
 }
 
+a {
+	color: #AFA70E;
+}
+
 a:hover {
 	text-decoration: none;
+	color: #C84B24;
 }
+
+/*  ------  LISTS --------*/
 
 ul li {
 	list-style-type: square;
+	line-height: 200%
+}
+
+/*  ------  SEPARATOR --------*/
+
+hr {
+	background-color: #ddd;
+    border: 0 none;
+    height: 1px;
+	width: 75%;
+}
+
+
+/*-------------------------*/
+/*  ------  SPECIFIC --------*/
+/*-------------------------*/
+
+
+/*  ------  HEADER --------*/
+
+
+header {
+	text-align: center;
+}
+
+header h2 {
+	font-size: 1em;
+	margin: 0;
+}
+
+/* ---------- NAV MENU - RENAMED AS "ACCORDION" --------- */
+
+#accordion ul li {
+ list-style-type:none;
+}
+
+/*  Basic stucture
+=====================*/
+#accordion{margin:100px auto;width:400px;}
+#accordion ul{list-style:none;margin:0;padding:0;}
+.accordion{display:none;}
+.accordion:target{display:block;}
+#accordion ul li a{text-decoration:none;display:block;padding:10px;}
+.accordion{padding:4px;}
+
+
+/*  Colors 
+====================*/
+#accordion ul{
+/*box-shadow*/
+-webkit-box-shadow:0 4px 10px #BDBDBD;
+   -moz-box-shadow:0 4px 10px #BDBDBD;
+        box-shadow:0 4px 10px #BDBDBD;
+/*border-radius*/
+-webkit-border-radius:5px;
+   -moz-border-radius:5px;
+        border-radius:5px;
+}
+#accordion ul li a{
+background:#fff;
+border-bottom:1px solid #AFA70E;
+font-weight: bold;
+color:#999; /* Text link colours */
+}
+
+#accordion ul li a:hover{
+border-bottom:1px solid #C84B24;
+color:#C84B24; /* Text link colours */
+}
+
+#accordion ul li a:active{
+border-bottom:1px solid #802489;
+color:#802489; /* Text link colours */
+}
+
+.accordion{
+background:#fdfdfd;
+color:#999;
+}
+.accordion:target{
+border-top:3px solid #AFA70E;
+}
+
+
+/* Test flèche */
+
+/*
+#accordion ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}*/
+
+/* Placement de la flèche par rapport au menu */
+
+#accordion li {
+    display: block;
+    position: relative;
+}
+
+#accordion a {
+    display: inline-block;
+}
+ #accordion > ul > li {
+    display: block;
+    float: none;
+} 
+
+
+ #accordion li ul {
+    display: none;
+    position: relative;
+    z-index: 999; 
+} 
+
+.toChild:after {
+    -moz-user-select: none;
+    content:"►";
+    clear: none;
+    cursor: default;
+    font-size: 16px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 8px;
+    width: 50px;
+    z-index: 9;
+}
+.toChild.down:after {
+    content:"▼";
+}
+
+
+
+/*  ------  FOOTER --------*/
+
+footer {
+	border-top : 1px dotted #C8BEBE;
+}
+	
+
+/* ---------- iFRAME --------- */
+
+iframe {
+	border : 3px solid #ddd;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+/* ---------- GENERAL STRUCTURE / HTML ---------- */
+
+
+body {
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
 /*  ------  MENU --------*/
+
 nav.menu {
     width: 30%;
     height: 100%;
 	float: left;
 	padding-right: 3em;
-	color: #333;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	/*color: #333;*/
     font-size: 0.9em;
     line-height: 0.9em;
 	list-style-type:none;
-}
+} 
+
+
+
 
 /* --------- CONTENT -----------*/
+
 main.content {
     width: 70%;
     /*height: auto;
@@ -70,12 +245,6 @@ main.content {
 
 /* ---------- HEADER ---------- */
 
-body > header {
-	margin: 0 0 20px 0;
-	letter-spacing: 5px;
-	color: #222;
-	text-align: center;
-}
 
 body > header > h1 {
     width: 100%;
@@ -86,20 +255,56 @@ body > header > h1 {
 	background-size: 20%;
 }
 
-header h1 a {
-	color: #222;
+
+
+
+/* ---------- FOOTER --------- */
+
+
+footer {
+	width:100%;
+	height:100px;
+	position:absolute;
+	bottom:0;
+	left:0;
 }
 
-header h1 a:hover {
-	text-decoration: none;
-}
 
-header h2 {
-	font-size: 1em;
-	margin: 0;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ---------- SECTION ---------- */
+
+/*
 
 section {
 	overflow: hidden;
@@ -110,9 +315,9 @@ section {
 	padding: 40px;
 	border-radius: 4px 4px 4px 4px;
 	border: 1px dotted #ddd;
-	/*background: #eee;*/
+	background: #eee;
 	margin-top: 40px;
-}
+} 
 
 .directory {
 	margin-bottom: 20px;
@@ -129,6 +334,7 @@ section {
 	border-radius: 6px;
 }
 
+*/
 
 
 
@@ -144,7 +350,7 @@ footer {
 	text-align: center;
 	font-size: 0.9em;
 }
-
+/*
 footer p {
 	margin: 0;
 }
@@ -156,18 +362,18 @@ footer a {
 footer a:hover {
 	color: #C84B24;
 }
-
-.copyright {
+*/
+/*.copyright {
 	font-size: 0.8em;
 	margin-top: 15px;
-}
+} */
 
 
 
 /* ---------- TABLE ---------- */
-table, th, td {
+/*table, th, td {
 	border: 0px;
-}
+}*/
 
 /* ---------- RESPONSIVE DESIGN ---------- */
 
@@ -189,6 +395,8 @@ table, th, td {
 		padding-right: 20px;
 	}
 
+	/*
+	
 	#container {
 		margin: 0 20px 20px 20px;
 		padding: 20px;
@@ -211,6 +419,8 @@ table, th, td {
 	}
 
 }
+
+*/
 /* ---------- RESPONSIVE VIDEO ---------- */
 iframe,
           embed,
@@ -230,6 +440,11 @@ iframe,
           }
 
 /* ---------- SIDEBAR ---------- */
+
+/*
+
+Sidebar inexistante.
+
 
 aside {
 	float: right;
@@ -263,7 +478,11 @@ aside li:first-letter {
 }
 
 
+*/
+
 /* ---------- ARTICLE / PAGE ---------- */
+
+/*
 
 .width-sidebar {
 	float: left;
@@ -330,9 +549,11 @@ article a:hover {
 	font-size: 0.8em;
 }
 
-
+*/
 
 /* ---------- PAGINATION ---------- */
+
+/*
 
 #pagination {
 	margin-bottom: 50px;
@@ -365,11 +586,9 @@ article a:hover {
 	text-transform: uppercase;
 }
 
-/* ---------- iFRAME --------- */
+*/
 
-iframe {
-	border : 3px solid #ddd;
-}
+
 
 /* ---------- NAV ---------- */
 /*

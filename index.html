@@ -3,11 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
-    <title>Culture Numérique - Test export cours HTML</title>
     <link rel="icon" href="http://culturenumerique.univ-lille3.fr/themes/cultnum/img/favicon.png" />
     <link rel="stylesheet" href="reset.css" media="screen"/>
     <link rel="stylesheet" href="style.css" media="screen"/>
 	<script type="text/javascript" src="http://culturenumerique.univ-lille3.fr/plugins/jquery/jquery.min.js"></script>
+    <title>Culture Numérique - Test export cours HTML</title>
 </head>
 
 <body>
@@ -20,12 +20,12 @@
     <nav class="menu">
         <h3>Navigation</h3>
         <ul>
-            <li><h4><a href="#" data-sec-id="sec_0">Introduction</a></h4></li>
-            <li><p><a href="#" data-sec-id="subsec_0_0">Comment répondre aux tests de compréhension ?</a></p></li>
-            <li><p><a href="#" data-sec-id="subsec_0_1">Comment répondre aux exercices d'approfondissement ?</a></p></li>
-            <li><h4><a href="#" data-sec-id="sec_1">1.1 Informatique et Numérique</a></h4></li>
-            <li><p><a href="#" data-sec-id="subsec_1_0">1.1.2 Le numérique dans tous les domaines (Exercice)</a></p></li>
-            <li><p><a href="#" data-sec-id="subsec_1_1">1.1.2 Le numérique dans tous les domaines (Correction)</a></p></li>
+            <li><h4><a href="#" data_sec_id="sec_0">Introduction</a></h4></li>
+            <li><p><a href="#" data_sec_id="subsec_0_0">Comment répondre aux tests de compréhension ?</a></p></li>
+            <li><p><a href="#" data_sec_id="subsec_0_1">Comment répondre aux exercices d'approfondissement ?</a></p></li>
+            <li><h4><a href="#" data_sec_id="">1.1 Informatique et Numérique</a></h4></li>
+            <li><p><a href="#" data_sec_id="subsec_1_0">1.1.2 Le numérique dans tous les domaines (Exercice)</a></p></li>
+            <li><p><a href="#" data_sec_id="subsec_1_1">1.1.2 Le numérique dans tous les domaines (Correction)</a></p></li>
         </ul>
     </nav>
     <!--  MAIN CONTENT -->
@@ -118,17 +118,22 @@
         $(function(){
             $(".menu ul li a").click(function(e){
                 e.preventDefault();
-                $('section').hide();
-                var selector = $(this).attr('data-sec-id');
+                var selector = $(this).attr('data_sec_id');
                 console.log('selector', selector);
-                var iframe = $('#'+selector).find('iframe');
-                console.log("found iframe ?", iframe)
-                if (iframe.data('src')){ // only do it once per iframe
-                    iframe.prop('src', iframe.data('src')).data('src', false);
+                if (selector.length == 0) {
+                    return true
+                }
+                else {
+                    $('section').hide();
+                    var iframe = $('#'+selector).find('iframe');
+                    console.log("found iframe ?", iframe)
+                    if (iframe.data('src')){ // only do it once per iframe
+                        iframe.prop('src', iframe.data('src')).data('src', false);
+                        console.log("iframe src = ", iframe.attr('src'))
+                        }
+                    $('#'+selector).show();
 
-                    console.log("iframe src = ", iframe.attr('src'))
-                    }
-                $('#'+selector).show();
+                }
                 });
         });
     </script>

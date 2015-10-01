@@ -92,6 +92,32 @@ def replaceLink(link):
     """ Replace __BASE__ in urls with base given un config file toIMSconfig.json """
     return link.replace("__BASE__/", '')
 
+def parse_content(href):
+    """ open file and replace ../img with img and src to data_src for iframes """
+
+    myparser = etree.HTMLParser(encoding="utf-8")
+    with open(href, 'r') as file:
+        htmltext = file.read()
+
+    tree = etree.HTML(htmltext, parser=myparser)
+    # = html.fromstring(filein)
+    try:
+        imgs = tree.xpath('//img')#we get a list of elements
+        for img in imgs:
+            new_src = img.get('src').replace('../img', 'img')
+            img.set('src', new_src)
+    except Exception as e:
+        pass
+    try:
+        iframes = tree.xpath('//iframe')
+        for iframe in iframes:
+            iframe.attrib['data-src'] = iframe.attrib['src']
+            etree.strip_attributes(iframe, 'src')
+    except Exception as e:
+        pass
+
+    return html.tostring(tree, encoding='utf-8').decode('utf-8')
+
 
 def generateIndexHtml(data):
     """ parse data from config file 'toIMSconfig.json' and recreate imsmanifest.xml """
@@ -129,14 +155,14 @@ def generateIndexHtml(data):
                 with tag('li'):
                     with tag('a', href="#", data_sec_id=section_id):
                         text(data["sections"][idA]["title"])
-                    # looping through subsections
+                    # looping through subsections, skipping non html files
                     for idB, subsection in enumerate(data["sections"][idA]["subsections"]):
-                        # href = data["sections"][idA]["subsections"][idB]["source_file"]
-                        # filename = href.rsplit('/',1)[1]
-                        with tag('li'):
-                            subsection_id = "subsec_"+str(idA)+"_"+str(idB)
-                            with tag('a', href="#", data_sec_id=subsection_id):
-                                text(data["sections"][idA]["subsections"][idB]["title"])
+                        href = data["sections"][idA]["subsections"][idB]["source_file"]
+                        if href.endswith(".html"):
+                            with tag('li'):
+                                subsection_id = "subsec_"+str(idA)+"_"+str(idB)
+                                with tag('a', href="#", data_sec_id=subsection_id):
+                                    text(data["sections"][idA]["subsections"][idB]["title"])
 
     print (" ====================  A: Result doc :\n %s" % ((doc.getvalue())))
 
@@ -153,26 +179,22 @@ def generateIndexHtml(data):
             with tag('section', id=section_id, style=("display:"+display)):
                 try:
                     href = data["sections"][idA]["source_file"]
-                    html_doc = html.parse(href)
-                    body = html_doc.find('body')
-                    doc.asis(html.tostring(body).decode("utf-8"))
-                    print("Section %s Html printed : %s" % (section_id, html.tostring(body)))
+                    doc.asis(parse_content(href))
                 except:
-                    print (" ---- error with html doc ----- section %s" % (section_id))
+                    print (" ---- no content for section %s" % (section_id))
                     text("")
             # Loop through subsections
             for idB, subsection in enumerate(data["sections"][idA]["subsections"]):
                 subsection_id = "subsec_"+str(idA)+"_"+str(idB)
-                with tag('section', id=subsection_id, style="display:none"):
-                    try:
-                        href = data["sections"][idA]["subsections"][idB]["source_file"]
-                        html_doc = html.parse(href)
-                        body = html_doc.find('body')
-                        doc.asis(html.tostring(body).decode("utf-8"))
-                        print("subsection %s Html printed : %s" % (subsection_id, html.tostring(body)))
-                    except:
-                        print (" ---- error with html doc ----- subsection %s" % (subsection_id))
-                        text("")
+                href = data["sections"][idA]["subsections"][idB]["source_file"]
+                if href.endswith(".html"):
+                    with tag('section', id=subsection_id, style="display:none"):
+                        try:
+
+                            doc.asis(parse_content(href))
+                        except:
+                            print (" ---- no content for subsection %s" % (subsection_id))
+                            text("")
 
 
     print ("==================  B:  Result doc :\n %s" % ((doc.getvalue())))

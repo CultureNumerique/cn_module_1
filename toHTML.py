@@ -28,17 +28,53 @@ HEADER = """
 FOOTER = """
 
 <footer>
-    <table>
-        <tr>
-            <td><img src="http://culturenumerique.univ-lille3.fr/themes/cultnum/img/ul3.png" title="" alt="Lille 3" /></td>
-            <td><p><a class="maintitle" href="http://culturenumerique.univ-lille3.fr/" title="Culture Numérique">Culture Numérique</a> - 2015 - Site </p</td>
-        </tr>
-    </table>
+    <img src="http://culturenumerique.univ-lille3.fr/themes/cultnum/img/ul3.png" title="" alt="Lille 3" />
+    <p><a href="http://culturenumerique.univ-lille3.fr/" title="Culture Numérique">Culture Numérique</a> - 2015</p>
 </footer>
 </body>
 </html>
 """
 
+SCRIPTS = """
+    \n<!-- SCRIPTs  -->
+        <script type="text/javascript">
+            // control of Navigation and sections loading
+            $(function(){
+                $("#accordion ul li a").click(function(e){
+                    e.preventDefault();
+                    var selector = $(this).attr('data_sec_id');
+                    console.log('selector', selector);
+                    if (selector.length == 0) {
+                        return true
+                    }
+                    else {
+                        $('section').hide();
+                        var iframe = $('#'+selector).find('iframe');
+                        console.log("found iframe ?", iframe)
+                        if (iframe.data('src')){ // only do it once per iframe
+                            iframe.prop('src', iframe.data('src')).data('src', false);
+                            console.log("iframe src = ", iframe.attr('src'))
+                            }
+                        $('#'+selector).show();
+
+                    }
+                    });
+            });
+
+            // Accordion script
+
+            $(function () {
+                var children = $('#accordion li a').filter(function () {
+                    return $(this).nextAll().length > 0
+                })
+                $('<span class="toChild"></span>').insertAfter(children)
+                $('#accordion .toChild').on('click touch', function (e) {
+                    $(this).toggleClass("down").next().slideToggle(400);
+                    $(this).closest('li').siblings().find('ul').hide()
+                });
+            })
+        </script>\n\n
+"""
 
 def usage():
     str = """
@@ -46,7 +82,7 @@ Usage:
    exporte les fichiers depuis l'arborescence git + fichier de config pour en faire un fichier HTML index.html
    puis comprimer les resources dans une archive /fileout/ exploitable sur un server Web
 
-   toIMS config_filein fileout
+   toIMS config_filein
 """
     print (str)
     exit(1)
@@ -73,13 +109,13 @@ def generateIndexHtml(data):
     doc.asis('<!--  HEADER -->')
     with tag('header'):
         with tag('h1'):
-            with tag('a', class="maintitle", href="http://culturenumerique.univ-lille3.fr", title="Culture Numérique"):
+            with tag('a', klass="maintitle", href="http://culturenumerique.univ-lille3.fr", title="Culture Numérique"):
                 text('Culture Numérique')
         with tag('h2'):
             text(data["lom_metadata"]["title"])
 
     doc.asis('<!--  NAVIGATION MENU -->')
-    with tag('nav', class="menu"):
+    with tag('nav', klass="menu", id="accordion"):
         with tag('h3'):
             text('Navigation')
         with tag('ul'):
@@ -91,74 +127,94 @@ def generateIndexHtml(data):
                 except:
                     section_id = ""
                 with tag('li'):
-                    with tag('h4'):
-                        with tag('a', href="#" data_sec_id=section_id):
-                            text(data["sections"][idA]["title"])
+                    with tag('a', href="#", data_sec_id=section_id):
+                        text(data["sections"][idA]["title"])
                     # looping through subsections
                     for idB, subsection in enumerate(data["sections"][idA]["subsections"]):
                         # href = data["sections"][idA]["subsections"][idB]["source_file"]
                         # filename = href.rsplit('/',1)[1]
                         with tag('li'):
-                            with tag('p'):
-                                subsection_id = "subsec_"+str(idA)+"_"+str(idB)
-                                with tag('a', href="#" data_sec_id=subsection_id):
-                                    text(data["sections"][idA]["subsections"][idB]["title"])
+                            subsection_id = "subsec_"+str(idA)+"_"+str(idB)
+                            with tag('a', href="#", data_sec_id=subsection_id):
+                                text(data["sections"][idA]["subsections"][idB]["title"])
 
+    print (" ====================  A: Result doc :\n %s" % ((doc.getvalue())))
 
     doc.asis('<!--  MAIN CONTENT -->')
-    with tag('main', class="content"):
+    with tag('main', klass="content"):
+        # Loop through sections
         for idA, section in enumerate(data["sections"]):
             section_id = "sec_"+(str(idA))
-
+            # load intro by default
             if idA == 0:
                 display = "true"
             else:
-                display = "false"
-            with tag('section', id=section_id style="display:"+display):
+                display = "none"
+            with tag('section', id=section_id, style=("display:"+display)):
                 try:
                     href = data["sections"][idA]["source_file"]
-                    
+                    html_doc = html.parse(href)
+                    body = html_doc.find('body')
+                    doc.asis(html.tostring(body).decode("utf-8"))
+                    print("Section %s Html printed : %s" % (section_id, html.tostring(body)))
                 except:
-
-
+                    print (" ---- error with html doc ----- section %s" % (section_id))
+                    text("")
+            # Loop through subsections
             for idB, subsection in enumerate(data["sections"][idA]["subsections"]):
+                subsection_id = "subsec_"+str(idA)+"_"+str(idB)
+                with tag('section', id=subsection_id, style="display:none"):
+                    try:
+                        href = data["sections"][idA]["subsections"][idB]["source_file"]
+                        html_doc = html.parse(href)
+                        body = html_doc.find('body')
+                        doc.asis(html.tostring(body).decode("utf-8"))
+                        print("subsection %s Html printed : %s" % (subsection_id, html.tostring(body)))
+                    except:
+                        print (" ---- error with html doc ----- subsection %s" % (subsection_id))
+                        text("")
 
-    # doc.asis("</manifest>")
-    # imsfile = open('imsmanifest.xml', 'w')
-    # imsfile.write(indent(doc.getvalue()))
-    # imsfile.close()
-    # return True
+
+    print ("==================  B:  Result doc :\n %s" % ((doc.getvalue())))
+    doc.asis(SCRIPTS)
+    doc.asis(FOOTER)
+    indexHtml = open('index_test.html', 'w')
+    indexHtml.write(indent(doc.getvalue()))
+    indexHtml.close()
+    return True
 
 
 def main(argv):
     """ toIMS is a utility to help building imscc archives for exporting curent material to Moodle """
-    if len(sys.argv) != 3:
+    if len(sys.argv) != 2:
         usage()
 
     filein = sys.argv[1]
-    fileout = sys.argv[2]
+    # fileout = sys.argv[2]
     # add .zip if not there
-    if fileout.rsplit('.', 1)[1] != 'zip':
-        fileout += '.zip'
+    # if fileout.rsplit('.', 1)[1] != 'zip':
+    #     fileout += '.zip'
 
     # load data from filin
     with open(filein, encoding='utf-8') as data_file:
         data = json.load(data_file)
+
+    # print(" Data loaded \n %s" % (data) )
     # parse data and generate imsmanifest.xml
-    generateIMSManifest(data)
-    print (" imsmanifest.xml saved. Compressing archive in %s " % (os.getcwd()))
+    generateIndexHtml(data)
+    print (" index.html saved. Compressing archive in %s " % (os.getcwd()))
 
     # Compress relevant files
-    zipf = zipfile.ZipFile(fileout, 'w')
-    zipf.write(os.getcwd()+'/imsmanifest.xml')
-    for dir_name in data['directories_to_ims']:
-        for file in os.listdir(dir_name):
-            filepath = os.path.join(os.getcwd(), dir_name)
-            filepath = os.path.join(filepath, file)
-            print (" Adding %s to archive " % (filepath))
-            zipf.write(filepath)
-
-    zipf.close()
+    # zipf = zipfile.ZipFile(fileout, 'w')
+    # zipf.write(os.getcwd()+'/imsmanifest.xml')
+    # for dir_name in data['directories_to_ims']:
+    #     for file in os.listdir(dir_name):
+    #         filepath = os.path.join(os.getcwd(), dir_name)
+    #         filepath = os.path.join(filepath, file)
+    #         print (" Adding %s to archive " % (filepath))
+    #         zipf.write(filepath)
+    #
+    # zipf.close()
 
 
 ############### main ################

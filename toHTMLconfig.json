@@ -11,12 +11,8 @@
     "sections":[
         {
             "title":"Culture Numérique",
+            "source_file":"webcontent/intro.html",
             "subsections":[
-                {
-                "title":"Objectifs et fonctionnement du cours Culture numérique",
-                "source_file":"img/culture-numerique_mode_emploi-v04.pdf",
-                "type":"webcontent"
-                },
                 {
                 "title":"Comment répondre aux tests de compréhension ?",
                 "source_file":"webcontent/comment_repondre_aux_tests_de_comprehension_.html",

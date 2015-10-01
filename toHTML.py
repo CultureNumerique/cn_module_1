@@ -200,7 +200,7 @@ def generateIndexHtml(data):
     print ("==================  B:  Result doc :\n %s" % ((doc.getvalue())))
     doc.asis(SCRIPTS)
     doc.asis(FOOTER)
-    indexHtml = open('index_test.html', 'w')
+    indexHtml = open('index.html', 'w')
     indexHtml.write(indent(doc.getvalue()))
     indexHtml.close()
     return True

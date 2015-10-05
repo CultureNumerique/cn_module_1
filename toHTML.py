@@ -28,52 +28,64 @@ HEADER = """
 FOOTER = """
 
 <footer>
-    <img src="http://culturenumerique.univ-lille3.fr/themes/cultnum/img/ul3.png" title="" alt="Lille 3" />
+    <a href="https://www.univ-lille3.fr/"><img src="svg/logo_lille3.svg" title="" alt="Lille 3" /></a>
     <p><a href="http://culturenumerique.univ-lille3.fr/" title="Culture Numérique">Culture Numérique</a> - 2015</p>
 </footer>
+</div> <!-- End of container-->
 </body>
 </html>
 """
 
 SCRIPTS = """
     \n<!-- SCRIPTs  -->
-        <script type="text/javascript">
-            // control of Navigation and sections loading
-            $(function(){
-                $("#accordion ul li a").click(function(e){
-                    e.preventDefault();
-                    var selector = $(this).attr('data_sec_id');
-                    console.log('selector', selector);
-                    if (selector.length == 0) {
-                        return true
+    <script type="text/javascript">
+        // control of Navigation and sections loading
+        $(function(){
+            $(".accordion ul li a").click(function(e){
+                e.preventDefault();
+                var selector = $(this).attr('data_sec_id');
+                console.log('selector', selector);
+                if (selector.length == 0) {
+                    return true
+                }
+                else {
+                    if ($(this).hasClass('subsection')){
+                        $('a.subsection').removeClass('active');
+                        $(this).addClass('active');
                     }
-                    else {
-                        $('section').hide();
-                        var iframe = $('#'+selector).find('iframe');
-                        console.log("found iframe ?", iframe)
-                        if (iframe.data('src')){ // only do it once per iframe
-                            iframe.prop('src', iframe.data('src')).data('src', false);
-                            console.log("iframe src = ", iframe.attr('src'))
-                            }
-                        $('#'+selector).show();
+                    $('section').hide();
+                    var iframe = $('#'+selector).find('iframe');
+                    console.log("found iframe ?", iframe)
+                    if (iframe.data('src')){ // only do it once per iframe
+                        iframe.prop('src', iframe.data('src')).data('src', false);
+                        console.log("iframe src = ", iframe.attr('src'))
+                        }
+                    $('#'+selector).show();
 
-                    }
-                    });
-            });
-
-            // Accordion script
-
-            $(function () {
-                var children = $('#accordion li a').filter(function () {
-                    return $(this).nextAll().length > 0
-                })
-                $('<span class="toChild"></span>').insertAfter(children)
-                $('#accordion .toChild').on('click touch', function (e) {
-                    $(this).toggleClass("down").next().slideToggle(400);
-                    $(this).closest('li').siblings().find('ul').hide()
+                }
                 });
-            })
-        </script>\n\n
+        });
+        // Accordion menu
+        (function($) {
+            $('.accordion > li:eq(0) a').addClass('active').next().slideDown();
+
+            $('.accordion a.section').click(function(j) {
+                console.log("accordéon ====");
+                var dropDown = $(this).closest('li').find('p');
+                $(this).closest('.accordion').find('p').not(dropDown).slideUp();
+
+                if ($(this).hasClass('active')) {
+                    $(this).removeClass('active');
+                } else {
+                    $(this).closest('.accordion').find('a.active').removeClass('active');
+                    $(this).addClass('active');
+                }
+
+                dropDown.stop(false, true).slideToggle();
+                j.preventDefault();
+            });
+        })(jQuery);
+    </script>\n\n
 """
 
 def usage():
@@ -133,6 +145,7 @@ def generateIndexHtml(data):
     doc.asis('</head>\n')
     doc.asis('<body>\n')
     doc.asis('<!--  HEADER -->')
+    doc.asis('<div id="container">')
     with tag('header'):
         with tag('h1'):
             with tag('a', klass="maintitle", href="http://culturenumerique.univ-lille3.fr", title="Culture Numérique"):
@@ -141,7 +154,7 @@ def generateIndexHtml(data):
             text(data["lom_metadata"]["title"])
 
     doc.asis('<!--  NAVIGATION MENU -->')
-    with tag('nav', klass="menu", id="accordion"):
+    with tag('nav', klass="menu accordion"):
         with tag('h3'):
             text('Navigation')
         with tag('ul'):
@@ -153,15 +166,16 @@ def generateIndexHtml(data):
                 except:
                     section_id = ""
                 with tag('li'):
-                    with tag('a', href="#", data_sec_id=section_id):
+                    with tag('a', href="#", data_sec_id=section_id, klass="section"):
                         text(data["sections"][idA]["title"])
-                    # looping through subsections, skipping non html files
-                    for idB, subsection in enumerate(data["sections"][idA]["subsections"]):
-                        href = data["sections"][idA]["subsections"][idB]["source_file"]
-                        if href.endswith(".html"):
-                            with tag('li'):
+                    with tag('p'):
+                        # looping through subsections, skipping non html files
+                        for idB, subsection in enumerate(data["sections"][idA]["subsections"]):
+                            href = data["sections"][idA]["subsections"][idB]["source_file"]
+                            if href.endswith(".html"):
                                 subsection_id = "subsec_"+str(idA)+"_"+str(idB)
-                                with tag('a', href="#", data_sec_id=subsection_id):
+                                section_type = data["sections"][idA]["subsections"][idB]["type"]
+                                with tag('a', href="#", data_sec_id=subsection_id, klass="subsection "+section_type):
                                     text(data["sections"][idA]["subsections"][idB]["title"])
 
     print (" ====================  A: Result doc :\n %s" % ((doc.getvalue())))
@@ -171,7 +185,7 @@ def generateIndexHtml(data):
         # Loop through sections
         for idA, section in enumerate(data["sections"]):
             section_id = "sec_"+(str(idA))
-            # load intro by default
+            # load intro by default, rest is hidden
             if idA == 0:
                 display = "true"
             else:
@@ -218,6 +232,7 @@ def main(argv):
     #     fileout += '.zip'
 
     # load data from filin
+    print ("Arguments : filein %s " % (filein))
     with open(filein, encoding='utf-8') as data_file:
         data = json.load(data_file)
 

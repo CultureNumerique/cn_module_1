@@ -16,17 +16,26 @@
     		<h1><a href="http://culturenumerique.univ-lille3.fr/" title="Culture Numérique">Culture Numérique</a></h1>
     		<h2>Cours UE10 - 2e semestre - 2014-2015 - Version HTML</h2>
     	</header>
-		
+
         <!--  NAVIGATION MENU -->
-        <nav id="accordion">
+        <nav class="accordion">
             <h3>Navigation</h3>
             <ul>
-                <li><a href="#" data_sec_id="sec_0" class="label">Introduction</a></li>
-                <li><a href="#" data_sec_id="subsec_0_0" class="howto">Comment répondre aux tests de compréhension ?</a></li>
-                <li><a href="#" data_sec_id="subsec_0_1" class="howto">Comment répondre aux exercices d'approfondissement ?</a></li>
-                <li><a href="#" data_sec_id="">1.1 Informatique et Numérique</a></li>
-                <li><a href="#" data_sec_id="subsec_1_0" class="quiz">1.1.2 Le numérique dans tous les domaines (Exercice)</a></li>
-                <li><a href="#" data_sec_id="subsec_1_1" class="correction">1.1.2 Le numérique dans tous les domaines (Correction)</a></li>
+                <li>
+                    <a href="#" data_sec_id="sec_0" class="section">Introduction</a>
+                    <p>
+                        <a href="#" data_sec_id="subsec_0_0" class="howto subsection">Comment répondre aux tests de compréhension ?</a>
+                        <a href="#" data_sec_id="subsec_0_1" class="howto subsection">Comment répondre aux exercices d'approfondissement ?</a>
+                    </p>
+                </li>
+                <li>
+                    <a href="#" data_sec_id="" class="section">1.1 Informatique et Numérique</a>
+                    <p>
+                        <a href="#" data_sec_id="subsec_1_0" class="quiz subsection">1.1.2 Le numérique dans tous les domaines (Exercice)</a>
+                        <a href="#" data_sec_id="subsec_1_1" class="correction subsection">1.1.2 Le numérique dans tous les domaines (Correction)</a>
+                    </p>
+                </li>
+
             </ul>
         </nav>
         <!--  MAIN CONTENT -->
@@ -116,8 +125,8 @@
         <!-- SCRIPTs  -->
         <script type="text/javascript">
             // control of Navigation and sections loading
-            $(function(){
-                $("#accordion ul li a").click(function(e){
+            (function($){
+                $(".accordion ul li a").click(function(e){
                     e.preventDefault();
                     var selector = $(this).attr('data_sec_id');
                     console.log('selector', selector);
@@ -125,6 +134,11 @@
                         return true
                     }
                     else {
+                        console.log("checking active", $(this))
+                        if ($(this).hasClass('subsection')){
+                            $('a.subsection').removeClass('active');
+                            $(this).addClass('active');
+                        }
                         $('section').hide();
                         var iframe = $('#'+selector).find('iframe');
                         console.log("found iframe ?", iframe)
@@ -136,31 +150,38 @@
 
                     }
                     });
-            });
+            })(jQuery);
+            // Accordion menu
+            (function($) {
+                $('.accordion > li:eq(0) a').addClass('active').next().slideDown();
 
-            // Accordion script
+                $('.accordion a.section').click(function(j) {
+                    console.log("accordéon ====");
+                    var dropDown = $(this).closest('li').find('p');
+                    $(this).closest('.accordion').find('p').not(dropDown).slideUp();
 
-            $(function () {
-                var children = $('#accordion li a').filter(function () {
-                    return $(this).nextAll().length > 0
-                })
-                $('<span class="toChild"></span>').insertAfter(children)
-                $('#accordion .toChild').on('click touch', function (e) {
-                    $(this).toggleClass("down").next().slideToggle(400);
-                    $(this).closest('li').siblings().find('ul').hide()
+                    if ($(this).hasClass('active')) {
+                        $(this).removeClass('active');
+                    } else {
+                        $(this).closest('.accordion').find('a.active').removeClass('active');
+                        $(this).addClass('active');
+                    }
+
+                    dropDown.stop(false, true).slideToggle();
+                    j.preventDefault();
                 });
-            })
+            })(jQuery);
         </script>
 			  <!--  FOOTER -->
         <footer>
             <a href="https://www.univ-lille3.fr/"><img src="svg/logo_lille3.svg" title="" alt="Lille 3" /></a>
             <p><a href="http://culturenumerique.univ-lille3.fr/" title="Culture Numérique">Culture Numérique</a> - 2015</p>
         </footer>
-	
+
 	</div><!-- end of container -->
 
-    
-	      
+
+
 
 
 </body>

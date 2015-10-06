@@ -62,10 +62,10 @@ a:hover {
 
 /*  ------  LISTS --------*/
 
-ul li {
+/*ul li {
 	list-style-type: square;
 	line-height: 200%
-}
+}*/
 
 /*  ------  SEPARATOR --------*/
 
@@ -215,7 +215,7 @@ a.active{
     content: url('svg/help.svg');
 }
 
-.quiz:before {
+.quizz:before {
 	content: url('svg/activite_quiz.svg');
 }
 
@@ -232,6 +232,20 @@ a.active{
 /* ---------- NAV MENU - RENAMED AS "ACCORDION" --------- */
 
 
+/* Questions quizz */
+.question {
+	margin: 5px;
+	padding: 3px;
+}
+
+.question ul {
+	list-style-type: none;
+}
+
+.question p.questiontext {
+	font-weight: bold;
+	color: dark-grey;
+}
 /*  ------  FOOTER --------*/
 
 footer {

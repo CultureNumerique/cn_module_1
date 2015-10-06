@@ -14,12 +14,12 @@
             "source_file":"webcontent/intro.html",
             "subsections":[
                 {
-                "title":"Comment répondre aux tests de compréhension ?",
+                "title":"Comment répondre aux tests de compréhension?",
                 "source_file":"webcontent/comment_repondre_aux_tests_de_comprehension_.html",
                 "type":"howto"
                 },
                 {
-                "title":"Comment répondre aux exercices d'approfondissement ?",
+                "title":"Comment répondre aux exercices d'approfondissement?",
                 "source_file":"webcontent/comment_repondre_aux_exercices_d_approfondissement_.html",
                 "type":"howto"
                 }
@@ -32,6 +32,11 @@
                 "title":"1.1 Informatique et numérique (version texte)",
                 "source_file":"webcontent/1.1_informatique_et_numerique_version_texte.html",
                 "type":"webcontent"
+                },
+                {
+                "title":"1.1.1 Quizz (3 questions)",
+                "source_file":"assessments/1.1.1.quizz.html",
+                "type":"quizz"
                 },
                 {
                 "title":"1.1.2 Le numérique dans tous les domaines",
@@ -59,6 +64,16 @@
                 "type":"webcontent"
                 },
                 {
+                "title":"1.2.1 Quizz (2 questions)",
+                "source_file":"assessments/1.2.1.quizz.html",
+                "type":"quizz"
+                },
+                {
+                "title":"1.2.2 Quizz (2 questions)",
+                "source_file":"assessments/1.2.2.quizz.html",
+                "type":"quizz"
+                },
+                {
                 "title":"1.2.3 Personnages importants",
                 "source_file":"assignment/1-2-3-des-personnages-importants.html",
                 "type":"assignment"
@@ -69,7 +84,7 @@
                 "type":"assignment"
                 },
                 {
-                "title":"1.2.5 D'où vient le PC ?",
+                "title":"1.2.5 D'où vient le PC?",
                 "source_file":"assignment/1-2-5-dou-vient-le-pc.html",
                 "type":"assignment"
                 },
@@ -89,27 +104,37 @@
 				"type":"webcontent"
                 },
                 {
-                "title":"1.3.2 Qui a inventé Internet ?",
+                "title":"1.3.1 Quizz (3 questions)",
+                "source_file":"assessments/1.3.1.quizz.html",
+                "type":"quizz"
+                },
+                {
+                "title":"1.3.2 Qui a inventé Internet?",
                 "source_file":"assignment/1-3-2-qui-a-invente-internet.html",
                 "type":"assignment"
                 },
                 {
-                "title":"1.3.3 Qui a accès à internet ?",
+                "title":"1.3.3 Qui a accès à internet?",
                 "source_file":"assignment/1-3-3-qui-a-acces-a-internet.html",
                 "type":"assignment"
                 }
             ]
         },{
-            "title":"1.4 Comment ça marche ?",
+            "title":"1.4 Comment ça marche?",
             "source_file":"videos/1.4_comment_ca_marche__version_video_.html",
             "subsections":[
                 {
-                "title":"1.4 Comment ça marche ? (version texte)",
+                "title":"1.4 Comment ça marche? (version texte)",
                 "source_file":"webcontent/1.4_comment_ca_marche_?_version_texte.html",
 				"type":"webcontent"
                 },
                 {
-                "title":"1.4.2 Combien y-a-t-il d'adresses IP ?",
+                "title":"1.4.1 Quizz (3 questions)",
+                "source_file":"assessments/1.4.1.quizz.html",
+                "type":"quizz"
+                },
+                {
+                "title":"1.4.2 Combien y-a-t-il d'adresses IP?",
                 "source_file":"webcontent/1.4.2_combien_y-a-t-il_dadresses_ip_?.html",
 				"type":"webcontent"
                 },
@@ -120,13 +145,18 @@
                 }
             ]
         },{
-            "title":"1.5 Que se passe-t-il quand on se connecte à Internet ?",
+            "title":"1.5 Que se passe-t-il quand on se connecte à Internet?",
             "source_file":"videos/1.5_que_se_passe_t-il_quand_on_se_connecte_a_internet__version_video_.html",
             "subsections":[
                 {
-                "title":"1.5 Que se passe-t-il quand on se connecte à Internet ? (version texte)",
+                "title":"1.5 Que se passe-t-il quand on se connecte à Internet? (version texte)",
                 "source_file":"webcontent/1.5_que_se_passe-t-il_quand_on_se_connecte_a_internet_?_version_texte.html",
 				"type":"webcontent"
+                },
+                {
+                "title":"1.5.1 Quizz (2 questions)",
+                "source_file":"assessments/1.5.1.quizz.html",
+                "type":"quizz"
                 },
                 {
                 "title":"1.5.2 Utiliser les serveurs de noms",
@@ -147,6 +177,11 @@
                 "title":"1.6 Les supports physiques de transmission de l’information (version texte)",
                 "source_file":"webcontent/1.6_les_supports_physiques_de_transmission_de_l_information_version_texte.html",
 				"type":"webcontent"
+                },
+                {
+                "title":"1.6.1 Quizz (3 questions)",
+                "source_file":"assessments/1.6.1.quizz.html",
+                "type":"quizz"
                 },
                 {
                 "title":"1.7 Connexions nomades et vitesse de transmission  (version video)",
@@ -170,16 +205,16 @@
                 }
             ]
         },{
-            "title":"1.8 Société : qui décide sur Internet ?",
+            "title":"1.8 Société : qui décide sur Internet?",
             "source_file":"videos/1.8_societe_qui_decide_sur_internet__version_video_.html",
             "subsections":[
                 {
-                "title":"1.8 Société : qui décide sur Internet ? (version texte)",
+                "title":"1.8 Société : qui décide sur Internet? (version texte)",
                 "source_file":"webcontent/1.8_societe__qui_decide_sur_internet_?_version_texte.html",
 				"type":"webcontent"
                 },
                 {
-                "title":"1.8.2 Le saviez-vous ? Comment la Chine censure Internet ?",
+                "title":"1.8.2 Le saviez-vous? Comment la Chine censure Internet?",
                 "source_file":"webcontent/1.8.2_le_saviez-vous_?_comment_la_chine_censure_internet_?.html",
 				"type":"webcontent"
                 },

@@ -20,9 +20,11 @@ HEADER = """
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
     <link rel="icon" href="http://culturenumerique.univ-lille3.fr/themes/cultnum/img/favicon.png" />
-    <link rel="stylesheet" href="reset.css" media="screen"/>
     <link rel="stylesheet" href="style.css" media="screen"/>
     <script type="text/javascript" src="http://culturenumerique.univ-lille3.fr/plugins/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="js/fancybox/jquery.fancybox.pack.js"></script>
+
+    <link rel="stylesheet" href="css/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
 """
 
 FOOTER = """
@@ -39,6 +41,30 @@ FOOTER = """
 SCRIPTS = """
     \n<!-- SCRIPTs  -->
     <script type="text/javascript">
+        $(".fancybox").fancybox({
+                            padding : 0,
+                            maxWidth : '90%',
+                            maxHeight : '90%',
+                            fitToView : false,
+                            width : '80%',
+                            height : '80%',
+                            autoSize : false,
+                            closeClick : false,
+                            openEffect : 'none',
+                            closeEffect : 'none',
+                            tpl: {
+                                    next : '<a title="Next" class="fancybox-nav fancybox-next fancybox-wb-next" href="javascript:;"></a>',
+                                    prev : '<a title="Previous" class="fancybox-nav fancybox-prev fancybox-wb-prev" href="javascript:;"></a>',
+                                    closeBtn: '<a title="Close" class="fancybox-item fancybox-close fancybox-wb-close" href="javascript:;"></a>'
+                            },
+                            helpers : {
+                                    overlay : {
+                                        css : {
+                                            'background' : 'rgba(255, 255, 255, 0.95)'
+                                        }
+                                    }
+                            }
+                            });
         // control of Navigation and sections loading
         $(function(){
             $(".accordion ul li a").click(function(e){
@@ -221,15 +247,20 @@ def generateIndexHtml(data):
                                 text("")
                     try:
                         videos = data["sections"][idA]["subsections"][idB]["videos"]
-                        for video in videos:
+                        for idVid, video in  enumerate(videos):
                             print (" ---- FOUND video content for subsection %s : %s" % (subsection_id, video))
                             try:
                                 embed_src = video["video_embed_src"]
                                 doc.asis(parse_content(embed_src))
                                 doc.asis("\n\n")
-                                # FIXME : 
+                                # add text in fancybox lightbox
                                 text_src =  video["video_text_src"]
-                                doc.asis(parse_content(text_src))
+                                text_id = subsection_id+"_"+str(idVid)
+                                with tag('a', klass="inline fancybox", href="#"+text_id):
+                                    text('Version Texte')
+                                with tag('div', style="display:none"):
+                                    with tag('div', id=text_id):
+                                        doc.asis(parse_content(text_src))
                             except:
                                 print (" ---- error while processsing video content for subsection %s" % (subsection_id))
                                 text("")

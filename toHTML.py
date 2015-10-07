@@ -171,14 +171,21 @@ def generateIndexHtml(data):
                     with tag('p'):
                         # looping through subsections, skipping non html files
                         for idB, subsection in enumerate(data["sections"][idA]["subsections"]):
-                            href = data["sections"][idA]["subsections"][idB]["source_file"]
-                            if href.endswith(".html"):
+                            try:
+                                href = data["sections"][idA]["subsections"][idB]["source_file"]
+                            except:
+                                href = ""
+                            try:
+                                videos = data["sections"][idA]["subsections"][idB]["videos"]
+                            except:
+                                videos = []
+                            if href.endswith(".html") or len(videos) > 0:
                                 subsection_id = "subsec_"+str(idA)+"_"+str(idB)
                                 section_type = data["sections"][idA]["subsections"][idB]["type"]
                                 with tag('a', href="#", data_sec_id=subsection_id, klass="subsection "+section_type):
                                     text(data["sections"][idA]["subsections"][idB]["title"])
 
-    print (" ====================  A: Result doc :\n %s" % ((doc.getvalue())))
+    #print (" ====================  A: Result doc :\n %s" % ((doc.getvalue())))
 
     doc.asis('<!--  MAIN CONTENT -->')
     with tag('main', klass="content"):
@@ -200,18 +207,38 @@ def generateIndexHtml(data):
             # Loop through subsections
             for idB, subsection in enumerate(data["sections"][idA]["subsections"]):
                 subsection_id = "subsec_"+str(idA)+"_"+str(idB)
-                href = data["sections"][idA]["subsections"][idB]["source_file"]
-                if href.endswith(".html"):
-                    with tag('section', id=subsection_id, style="display:none"):
-                        try:
+                with tag('section', id=subsection_id, style="display:none"):
+                    try:
+                        href = data["sections"][idA]["subsections"][idB]["source_file"]
+                    except:
+                        href = ""
+                        text("")
+                    if href.endswith(".html"):
+                            try:
+                                doc.asis(parse_content(href))
+                            except:
+                                print (" ---- no web content for subsection %s" % (subsection_id))
+                                text("")
+                    try:
+                        videos = data["sections"][idA]["subsections"][idB]["videos"]
+                        for video in videos:
+                            print (" ---- FOUND video content for subsection %s : %s" % (subsection_id, video))
+                            try:
+                                embed_src = video["video_embed_src"]
+                                doc.asis(parse_content(embed_src))
+                                doc.asis("\n\n")
+                                # FIXME : 
+                                text_src =  video["video_text_src"]
+                                doc.asis(parse_content(text_src))
+                            except:
+                                print (" ---- error while processsing video content for subsection %s" % (subsection_id))
+                                text("")
+                    except:
+                        print (" ---- NO video content for subsection %s" % (subsection_id))
+                        videos = []
 
-                            doc.asis(parse_content(href))
-                        except:
-                            print (" ---- no content for subsection %s" % (subsection_id))
-                            text("")
 
-
-    print ("==================  B:  Result doc :\n %s" % ((doc.getvalue())))
+    #print ("==================  B:  Result doc :\n %s" % ((doc.getvalue())))
     doc.asis(SCRIPTS)
     doc.asis(FOOTER)
     indexHtml = open('index.html', 'w')

@@ -69,28 +69,31 @@ SCRIPTS = """
         $(function(){
             $(".accordion ul li a").click(function(e){
                 e.preventDefault();
-                var selector = $(this).attr('data_sec_id');
+                current_node = $(this);
+                var selector = current_node.attr('data_sec_id');
                 console.log('selector', selector);
                 if (selector.length == 0) {
-                    return true
+                    //go to 1st subsection
+                    current_node = current_node.next().find('a.subsection')[0];
+                    selector = $(current_node).attr('data_sec_id');
                 }
-                else {
-                    if ($(this).hasClass('subsection')){
-                        $('a.subsection').removeClass('active');
-                        $(this).addClass('active');
-                    }
-                    $('section').hide();
-                    var iframes = $('#'+selector).find('iframe');
-                    console.log("found iframes ?", iframes);
-                    iframes.each(function(idx){
-                        if ($(this).data('src')){ // only do it once per iframe
-                            $(this).prop('src', $(this).data('src')).data('src', false);
-                            console.log("this src = ", $(this).attr('src'))
-                            }
-                    })
-                    $('#'+selector).show();
+                //else {
+                if ($(current_node).hasClass('subsection')){
+                    $('a.subsection').removeClass('active');
+                    $(current_node).addClass('active');
+                }
+                $('section').hide();
+                var iframes = $('#'+selector).find('iframe');
+                console.log("found iframes ?", iframes);
+                iframes.each(function(idx){
+                    if ($(this).data('src')){ // only do it once per iframe
+                        $(this).prop('src', $(this).data('src')).data('src', false);
+                        console.log("this src = ", $(this).attr('src'))
+                        }
+                })
+                $('#'+selector).show();
 
-                }
+                //}
                 });
         });
         // Accordion menu
@@ -141,6 +144,16 @@ def parse_content(href):
 
     tree = etree.HTML(htmltext, parser=myparser)
     # = html.fromstring(filein)
+
+    # removing "Retour au cours" links
+    try:
+        links = tree.xpath('//a[contains(@href, "COURSEVIEWBYID")]')
+        print (" ----- found links %s" % str(links))
+        for l in links:
+            l.getparent().remove(l)
+    except:
+        pass
+    # Adapt img links to direct path to img instead of ../img
     try:
         imgs = tree.xpath('//img')#we get a list of elements
         for img in imgs:
@@ -148,6 +161,7 @@ def parse_content(href):
             img.set('src', new_src)
     except Exception as e:
         pass
+    # For all iframes, rename 'src' attribute to 'data-src'
     try:
         iframes = tree.xpath('//iframe')
         for iframe in iframes:
@@ -190,7 +204,10 @@ def generateIndexHtml(data):
             for idA, section in enumerate(data["sections"]):
                 try:
                     source_file = data["sections"][idA]["source_file"]
-                    section_id = "sec_"+(str(idA))
+                    if len(source_file) > 0:
+                        section_id = "sec_"+(str(idA))
+                    else:
+                        section_id = ""
                 except:
                     section_id = ""
                 with tag('li'):
@@ -225,13 +242,12 @@ def generateIndexHtml(data):
                 display = "true"
             else:
                 display = "none"
-            with tag('section', id=section_id, style=("display:"+display)):
-                try:
-                    href = data["sections"][idA]["source_file"]
+            try:
+                href = data["sections"][idA]["source_file"]
+                with tag('section', id=section_id, style=("display:"+display)):
                     doc.asis(parse_content(href))
-                except:
-                    print (" ---- no content for section %s" % (section_id))
-                    text("")
+            except:
+                print (" ---- no content for section %s" % (section_id))
             # Loop through subsections
             for idB, subsection in enumerate(data["sections"][idA]["subsections"]):
                 subsection_id = "subsec_"+str(idA)+"_"+str(idB)

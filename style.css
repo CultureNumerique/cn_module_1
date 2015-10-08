@@ -139,7 +139,10 @@ header  h1 a:hover {
 }
 
 .accordion {
-    position:relative;
+    /*position:relative;*/
+	position: fixed;
+	top:130px;
+	z-index: 100; /* Keep it above to avoid overlap by footer*/
 	float:left;
 	width: 17.75em;
 	padding: 0 2em 7em; /* padding bottom = height of the footer*/
@@ -274,7 +277,7 @@ div.mini-text{
 /*  ------  FOOTER --------*/
 
 footer {
-	border-top : 1px dotted #C8BEBE;
+	/*border-top : 1px dotted #C8BEBE; FIXME : removed because sometimes footer area overlap menu */
 }
 
 footer img {
@@ -363,7 +366,9 @@ header {
 	padding: 2em;
 	margin-left: 21.75em;
 	margin-bottom:7.5em; /* Height of the footer */
+	display: block;
 }
+
 
 
 /* ---------- FOOTER --------- */

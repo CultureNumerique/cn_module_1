@@ -206,10 +206,14 @@
                 "title":"Cours",
                 "source_file":"",
                 "videos":[
-                        {
+                    {
                         "video_embed_src":"videos/1.6_les_supports_physiques_de_transmission_de_linfo__version_video_.html",
                         "video_text_src":"webcontent/1.6_les_supports_physiques_de_transmission_de_l_information_version_texte.html"
-                        }
+                    },
+                    {
+                        "video_embed_src":"videos/1.7_connexions_nomades_et_vitesse_de_transmission__version_video_.html",
+                        "video_text_src":"webcontent/1.7_connexions_nomades_et_vitesse_de_transmission__version_texte.html"
+                    }
                 ],
                 "type":"webcontent"
                 },
@@ -217,17 +221,6 @@
                 "title":"1.6.1 Quizz (3 questions)",
                 "source_file":"assessments/1.6.1.quizz.html",
                 "type":"quizz"
-                },
-                {
-                "title":"1.7 Connexions nomades et vitesse de transmission",
-                "source_file":"",
-                "videos":[
-                        {
-                        "video_embed_src":"videos/1.7_connexions_nomades_et_vitesse_de_transmission__version_video_.html",
-                        "video_text_src":"webcontent/1.7_connexions_nomades_et_vitesse_de_transmission__version_texte.html"
-                        }
-                ],
-				"type":"webcontent"
                 },
                 {
                 "title":"1.6.2 Wifi ou Données mobiles",
@@ -241,7 +234,7 @@
                 }
             ]
         },{
-            "title":"1.8 Société : qui décide sur Internet?",
+            "title":"1.7 Société : qui décide sur Internet?",
             "source_file":"",
             "subsections":[
                 {
@@ -256,12 +249,12 @@
                 "type":"webcontent"
                 },
                 {
-                "title":"1.8.2 Le saviez-vous? Comment la Chine censure Internet?",
+                "title":"1.7.2 Le saviez-vous? Comment la Chine censure Internet?",
                 "source_file":"webcontent/1.8.2_le_saviez-vous_?_comment_la_chine_censure_internet_?.html",
 				"type":"webcontent"
                 },
                 {
-                "title":"1.8.3 L’ICANN et la CNIL",
+                "title":"1.7.3 L’ICANN et la CNIL",
                 "source_file":"assignment/1-8-3-licann-et-la-cnil.html",
                 "type":"assignment"
                 }

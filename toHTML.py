@@ -42,11 +42,11 @@ SCRIPTS = """
     \n<!-- SCRIPTs  -->
     <script type="text/javascript">
         $(".fancybox").fancybox({
-                            padding : 0,
-                            maxWidth : '90%',
+                            padding : '1em',
+                            maxWidth : '70%',
                             maxHeight : '90%',
                             fitToView : false,
-                            width : '80%',
+                            width : '60%',
                             height : '80%',
                             autoSize : false,
                             closeClick : false,
@@ -60,7 +60,7 @@ SCRIPTS = """
                             helpers : {
                                     overlay : {
                                         css : {
-                                            'background' : 'rgba(255, 255, 255, 0.95)'
+                                            'background' : 'rgba(255, 255, 255, 0.8)'
                                         }
                                     }
                             }
@@ -80,12 +80,14 @@ SCRIPTS = """
                         $(this).addClass('active');
                     }
                     $('section').hide();
-                    var iframe = $('#'+selector).find('iframe');
-                    console.log("found iframe ?", iframe)
-                    if (iframe.data('src')){ // only do it once per iframe
-                        iframe.prop('src', iframe.data('src')).data('src', false);
-                        console.log("iframe src = ", iframe.attr('src'))
-                        }
+                    var iframes = $('#'+selector).find('iframe');
+                    console.log("found iframes ?", iframes);
+                    iframes.each(function(idx){
+                        if ($(this).data('src')){ // only do it once per iframe
+                            $(this).prop('src', $(this).data('src')).data('src', false);
+                            console.log("this src = ", $(this).attr('src'))
+                            }
+                    })
                     $('#'+selector).show();
 
                 }
@@ -248,6 +250,8 @@ def generateIndexHtml(data):
                     try:
                         videos = data["sections"][idA]["subsections"][idB]["videos"]
                         for idVid, video in  enumerate(videos):
+                            if idVid > 0:
+                                doc.asis('<br />')
                             print (" ---- FOUND video content for subsection %s : %s" % (subsection_id, video))
                             try:
                                 embed_src = video["video_embed_src"]
@@ -256,8 +260,10 @@ def generateIndexHtml(data):
                                 # add text in fancybox lightbox
                                 text_src =  video["video_text_src"]
                                 text_id = subsection_id+"_"+str(idVid)
-                                with tag('a', klass="inline fancybox", href="#"+text_id):
+                                with tag('div', klass="inline fancybox", href="#"+text_id):
                                     text('Version Texte')
+                                    with tag('div', klass="mini-text"):
+                                        doc.asis(parse_content(text_src))
                                 with tag('div', style="display:none"):
                                     with tag('div', id=text_id):
                                         doc.asis(parse_content(text_src))

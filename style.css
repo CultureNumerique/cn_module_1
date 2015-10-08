@@ -246,6 +246,31 @@ a.active{
 	font-weight: bold;
 	color: dark-grey;
 }
+
+/* ---------  fancyBox for video text in "lessons" main sections display */
+
+.fancybox-opened .fancybox-skin{
+	box-shadow: none!important;
+	-webkit-box-shadow:none!important;
+}
+
+div.inline {
+	cursor: pointer;
+	text-align: center;
+	width: 220px;
+	height: 228px;
+	overflow: hidden;
+	color: #AFA70E; /*same color than anchors a*/
+	margin-bottom: 2em;
+}
+
+div.mini-text{
+	font-size: 0.3em;
+	height: 201px;
+	color: gray;
+	text-align: left;
+	padding: 3em;
+}
 /*  ------  FOOTER --------*/
 
 footer {
@@ -271,6 +296,10 @@ footer img:hover {
 
 iframe {
 	border : 3px solid #ddd;
+	float: left;
+	width:400px;
+	height: 228px;
+	margin-bottom: 2em;
 }
 
 /*-----------------------------------------------------------------------------------------------------------------------------------*/

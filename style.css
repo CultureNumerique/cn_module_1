@@ -139,9 +139,9 @@ header  h1 a:hover {
 }
 
 .accordion {
-    /*position:relative;*/
-	position: fixed;
-	top:130px;
+    position:relative;
+	/*position: fixed;
+	top:130px;*/
 	z-index: 100; /* Keep it above to avoid overlap by footer*/
 	float:left;
 	width: 17.75em;
@@ -271,8 +271,13 @@ div.mini-text{
 	font-size: 0.3em;
 	height: 201px;
 	color: gray;
-	text-align: left;
+	text-align: justify;
 	padding: 3em;
+}
+
+div.fancy-text{
+	text-align: justify;
+	padding: 2em;
 }
 /*  ------  FOOTER --------*/
 
@@ -355,7 +360,7 @@ table, th, td {
 /*  ------  HEADER --------*/
 
 header {
-	margin: 2em;
+	/*margin: 2em;*/
 }
 
 

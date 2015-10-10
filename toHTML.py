@@ -65,6 +65,24 @@ SCRIPTS = """
                                     }
                             }
                             });
+        // nav stays on top while scrolling
+        $(document).scroll(function(){
+            var header_height = $('header').outerHeight();
+            console.log(" -- Scrolling !! --", document.body.scrollTop)
+            console.log(" -- header_height --", header_height)
+
+            if (document.body.scrollTop > header_height) {
+                console.log(" -- ABOVE limit --", header_height)
+
+                $('nav.accordion').attr('style', 'position:fixed;top:0;');
+            }
+            else {
+                console.log(" -- UNDER limit --", header_height)
+                $('nav.accordion').attr('style', '');
+
+            }
+
+        });
         // control of Navigation and sections loading
         $(function(){
             $(".accordion ul li a").click(function(e){
@@ -281,7 +299,7 @@ def generateIndexHtml(data):
                                     with tag('div', klass="mini-text"):
                                         doc.asis(parse_content(text_src))
                                 with tag('div', style="display:none"):
-                                    with tag('div', id=text_id):
+                                    with tag('div', id=text_id, klass="fancy-text"):
                                         doc.asis(parse_content(text_src))
                             except:
                                 print (" ---- error while processsing video content for subsection %s" % (subsection_id))

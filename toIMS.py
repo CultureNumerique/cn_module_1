@@ -16,7 +16,7 @@ from yattag import Doc
 FILETYPES = {
     'weblink' : 'imswl_xmlv1p1',
     'discussions' : 'imsdt_xmlv1p1',
-    'assessments' : 'imsqti_xmlv1p2/imscc_xmlv1p1/assessment',
+    'auto-evaluation' : 'imsqti_xmlv1p2/imscc_xmlv1p1/assessment',
     'webcontent' : 'webcontent',
 }
 

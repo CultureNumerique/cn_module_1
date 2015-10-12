@@ -218,14 +218,14 @@ a.active{
     content: url('svg/help.svg');
 }
 
-.quizz:before {
+.auto-evaluation:before {
 	content: url('svg/activite_quiz.svg');
 }
 
 .correction:before {
     content: url('svg/activite_correction.svg');
 }
-.assignment:before {
+.devoirs:before {
     content: url('svg/activite_assign.svg');
 }
 .webcontent:before{

@@ -1,5 +1,5 @@
 {
-    "directories_to_ims": ["assessments", "assignment", "discussions", "img", "webcontent", "weblinks", "videos"],
+    "directories_to_ims": ["auto-evaluation", "devoirs", "discussions", "img", "webcontent", "weblinks", "videos"],
     "base_url": "https://ged.univ-lille3.fr/nuxeo/site/dav/EspacePublicWWW/",
     "module_order":1,
     "lom_metadata": {
@@ -40,23 +40,23 @@
                 },
                 {
                 "title":"1.1.1 Quizz (3 questions)",
-                "source_file":"assessments/1.1.1.quizz.html",
-                "type":"quizz"
+                "source_file":"auto-evaluation/1.1.1.quizz.html",
+                "type":"auto-evaluation"
                 },
                 {
                 "title":"1.1.2 Le numérique dans tous les domaines",
-                "source_file":"assignment/1-1-2-le-numerique-dans-tous-les-domaines.html",
-                "type":"assignment"
+                "source_file":"devoirs/1-1-2-le-numerique-dans-tous-les-domaines.html",
+                "type":"devoirs"
                 },
                 {
                 "title":"1.1.3 Le numérique au quotidien",
-                "source_file":"assignment/1-1-3-le-numerique-au-quotidien.html",
-                "type":"assignment"
+                "source_file":"devoirs/1-1-3-le-numerique-au-quotidien.html",
+                "type":"devoirs"
                 },
                 {
                 "title":"1.1.4 Le numérique dans la société",
-                "source_file":"assignment/1-1-4-le-numerique-dans-la-societe.html",
-                "type":"assignment"
+                "source_file":"devoirs/1-1-4-le-numerique-dans-la-societe.html",
+                "type":"devoirs"
                 }
             ]
         },{
@@ -76,33 +76,33 @@
                 },
                 {
                 "title":"1.2.1 Quizz (2 questions)",
-                "source_file":"assessments/1.2.1.quizz.html",
-                "type":"quizz"
+                "source_file":"auto-evaluation/1.2.1.quizz.html",
+                "type":"auto-evaluation"
                 },
                 {
                 "title":"1.2.2 Quizz (2 questions)",
-                "source_file":"assessments/1.2.2.quizz.html",
-                "type":"quizz"
+                "source_file":"auto-evaluation/1.2.2.quizz.html",
+                "type":"auto-evaluation"
                 },
                 {
                 "title":"1.2.3 Personnages importants",
-                "source_file":"assignment/1-2-3-des-personnages-importants.html",
-                "type":"assignment"
+                "source_file":"devoirs/1-2-3-des-personnages-importants.html",
+                "type":"devoirs"
                 },
                 {
                 "title":"1.2.4 la vitesse des ordinateurs",
-                "source_file":"assignment/1-2-4-la-vitesse-des-ordinateurs.html",
-                "type":"assignment"
+                "source_file":"devoirs/1-2-4-la-vitesse-des-ordinateurs.html",
+                "type":"devoirs"
                 },
                 {
                 "title":"1.2.5 D'où vient le PC?",
-                "source_file":"assignment/1-2-5-dou-vient-le-pc.html",
-                "type":"assignment"
+                "source_file":"devoirs/1-2-5-dou-vient-le-pc.html",
+                "type":"devoirs"
                 },
                 {
                 "title":"1.2.6 Évolution des interfaces homme-machine",
-                "source_file":"assignment/1-2-6-les-interfaces-homme-machine.html",
-                "type":"assignment"
+                "source_file":"devoirs/1-2-6-les-interfaces-homme-machine.html",
+                "type":"devoirs"
                 }
             ]
         },{
@@ -122,18 +122,18 @@
                 },
                 {
                 "title":"1.3.1 Quizz (3 questions)",
-                "source_file":"assessments/1.3.1.quizz.html",
-                "type":"quizz"
+                "source_file":"auto-evaluation/1.3.1.quizz.html",
+                "type":"auto-evaluation"
                 },
                 {
                 "title":"1.3.2 Qui a inventé Internet?",
-                "source_file":"assignment/1-3-2-qui-a-invente-internet.html",
-                "type":"assignment"
+                "source_file":"devoirs/1-3-2-qui-a-invente-internet.html",
+                "type":"devoirs"
                 },
                 {
                 "title":"1.3.3 Qui a accès à internet?",
-                "source_file":"assignment/1-3-3-qui-a-acces-a-internet.html",
-                "type":"assignment"
+                "source_file":"devoirs/1-3-3-qui-a-acces-a-internet.html",
+                "type":"devoirs"
                 }
             ]
         },{
@@ -153,8 +153,8 @@
                 },
                 {
                 "title":"1.4.1 Quizz (3 questions)",
-                "source_file":"assessments/1.4.1.quizz.html",
-                "type":"quizz"
+                "source_file":"auto-evaluation/1.4.1.quizz.html",
+                "type":"auto-evaluation"
                 },
                 {
                 "title":"1.4.2 Combien y-a-t-il d'adresses IP?",
@@ -163,8 +163,8 @@
                 },
                 {
                 "title":"1.4.4. Panne générale ",
-                "source_file":"assignment/1-4-4-panne-generale.html",
-                "type":"assignment"
+                "source_file":"devoirs/1-4-4-panne-generale.html",
+                "type":"devoirs"
                 }
             ]
         },{
@@ -184,18 +184,18 @@
                 },
                 {
                 "title":"1.5.1 Quizz (2 questions)",
-                "source_file":"assessments/1.5.1.quizz.html",
-                "type":"quizz"
+                "source_file":"auto-evaluation/1.5.1.quizz.html",
+                "type":"auto-evaluation"
                 },
                 {
                 "title":"1.5.2 Utiliser les serveurs de noms",
-                "source_file":"assignment/1-5-2-utiliser-les-serveurs-de-noms.html",
-                "type":"assignment"
+                "source_file":"devoirs/1-5-2-utiliser-les-serveurs-de-noms.html",
+                "type":"devoirs"
                 },
                 {
                 "title":"1.5.3 La charte informatique de l'université",
-                "source_file":"assignment/1-5-3-la-charte-informatique-de-luniversite.html",
-                "type":"assignment"
+                "source_file":"devoirs/1-5-3-la-charte-informatique-de-luniversite.html",
+                "type":"devoirs"
                 }
             ]
         },{
@@ -219,18 +219,18 @@
                 },
                 {
                 "title":"1.6.1 Quizz (3 questions)",
-                "source_file":"assessments/1.6.1.quizz.html",
-                "type":"quizz"
+                "source_file":"auto-evaluation/1.6.1.quizz.html",
+                "type":"auto-evaluation"
                 },
                 {
                 "title":"1.6.2 Wifi ou Données mobiles",
-                "source_file":"assignment/1-6-2-wifi-ou-donnees-mobiles.html",
-                "type":"assignment"
+                "source_file":"devoirs/1-6-2-wifi-ou-donnees-mobiles.html",
+                "type":"devoirs"
                 },
                 {
                 "title":"1.6.3. Les débits",
-                "source_file":"assignment/1-6-3-les-debits.html",
-                "type":"assignment"
+                "source_file":"devoirs/1-6-3-les-debits.html",
+                "type":"devoirs"
                 }
             ]
         },{
@@ -255,8 +255,8 @@
                 },
                 {
                 "title":"1.7.3 L’ICANN et la CNIL",
-                "source_file":"assignment/1-8-3-licann-et-la-cnil.html",
-                "type":"assignment"
+                "source_file":"devoirs/1-8-3-licann-et-la-cnil.html",
+                "type":"devoirs"
                 }
             ]
         }

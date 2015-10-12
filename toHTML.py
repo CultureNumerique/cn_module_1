@@ -68,14 +68,16 @@ SCRIPTS = """
         // nav stays on top while scrolling
         $(document).scroll(function(){
             var header_height = $('header').outerHeight();
+            console.log(" -- Scrolling !! --", window.scrollY);
+            console.log(" -- header_height --", header_height);
 
             if (window.scrollY > header_height) {
-                //console.log(" -- ABOVE limit --", header_height)
+                console.log(" -- ABOVE limit --", header_height);
 
                 $('nav.accordion').attr('style', 'position:fixed;top:0;');
             }
             else {
-                //console.log(" -- UNDER limit --", header_height)
+                console.log(" -- UNDER limit --", header_height);
                 $('nav.accordion').attr('style', '');
 
             }

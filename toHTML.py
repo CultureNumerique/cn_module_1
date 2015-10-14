@@ -116,6 +116,10 @@ SCRIPTS = """
         });
         // Accordion menu
         (function($) {
+            // adapt main content height to menu height
+            var nav_height = $('nav.menu').outerHeight();
+            $('main.content').attr('style', 'min-height:'+nav_height+'px;')
+
             $('.accordion > li:eq(0) a').addClass('active').next().slideDown();
 
             $('.accordion a.section').click(function(j) {
